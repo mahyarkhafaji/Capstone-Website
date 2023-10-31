@@ -1,0 +1,39 @@
+#schedule td {
+    padding: 1em;
+    border: 1px solid black;
+}
+
+#schedule.hide3 tr > *:nth-child(3) {
+    display: none;
+}
+#schedule.show3 tr > *:nth-child(3) {
+    display: block;
+}
+
+#schedule.hide4 tr > *:nth-child(4) {
+    display: none;
+}
+#schedule.show4 tr > *:nth-child(4) {
+    display: block;
+}
+
+#schedule.hide5 tr > *:nth-child(5) {
+    display: none;
+}
+#schedule.show5 tr > *:nth-child(5) {
+    display: block;
+}
+
+#schedule.hide6 tr > *:nth-child(6) {
+    display: none;
+}
+#schedule.show6 tr > *:nth-child(6) {
+    display: block;
+}
+
+#schedule.hide7 tr > *:nth-child(7) {
+    display: none;
+}
+#schedule.show7 tr > *:nth-child(7) {
+    display: block;
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: center;
+        }
+        </style>
+    <link rel="stylesheet" href="question.css">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="schedule.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+          <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large" style="background-color:rgb(69, 0, 132);color:white">
+    <a href="professor.html" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="buttonpng" width="25"/></a>
+    <a href="questionnaire.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Questionnaire</a>
+    <a href="refine.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Refine Syllabus</a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-display-topright">Back to main page</a>
+</div>
+
+    <h1>Website Questionnaire</h1>
+    <form class = "" method="post" action="connection.php" autocomplete="off">
+      <label for="Q1">What is the name of the University?</label>
+      <input type="text" name="Q1" required><br>
+
+      <label for="Q2">What is the major program?</label>
+      <input type="text" name="Q2" required><br>
+
+      <label for="Q3">What is the instructor(s) name?</label>
+      <input type="text" name="Q3" required><br>
+
+      <script>
+        function display1(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q5q.style.display="inline";
+            Q5a.style.display="inline";
+          }
+        }
+  
+        function disappear1(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q5q.style.display="none";
+            Q5a.style.display="none";
+          }
+        }
+      </script>
+  
+      <label for="Q4">Would you like to put a phone number?</label>
+      <input type="radio" id="check1" onclick="display1('check1')" name="Q4" value = "Yes"> Yes 
+      <input type="radio" id="check2" onclick="disappear1('check2')" name="Q4" value = "No"> No<br>
+  
+      <label for="Q5" id = "Q5q">Insert phone number</label>
+      <input type="text" id= "Q5a" name="Q5"><br>
+
+      <label for="Q6">Enter instructor(s) email</label>
+      <input type="text" name="Q6" required><br>
+
+      <label for="Q7">What is the course name?</label>
+      <input type="text" name="Q7" required><br>
+
+      <label for="Q8">What building and class room is the course located in?</label>
+      <input type="text" name="Q8" required><br>
+
+      <label for="Q9">What time is the class?</label>
+      <input type="text" name="Q9" required><br>
+
+      <label for="Q10">What are the office hours?</label>
+      <input type="text" name="Q10" required><br>
+
+      <label for="Q11">What is the office location?</label>
+      <input type="text" name="Q11" required><br>
+
+      <label for="Q12">What semester period is this course going to take place?</label>
+      <input type="text" name="Q12" required><br>
+
+      <p><label for="Q13">What is your university's honor code?</label></p>
+      <textarea name="Q13" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+
+      <p><label for="Q14">What is your university's disability services policy?</label></p>
+      <textarea name="Q14" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+
+      <p><label for="Q15">What is your attendance policy?</label></p>
+      <textarea name="Q15" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+
+      <p><label for="Q16">What is the course description?</label></p>
+      <textarea name="Q16" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+
+      <p><label for="Q17">What is your inclement weather policy?</label></p>
+      <textarea name="Q17" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+
+      <script>
+        function display2(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q19q.style.display="inline";
+            Q19a.style.display="inline";
+            Q20q.style.display="inline";
+            Q20a.style.display="inline";
+            Q21q.style.display="inline";
+            Q21a.style.display="inline";
+          }
+        }
+  
+        function disappear2(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q19q.style.display="none";
+            Q19a.style.display="none";
+            Q20q.style.display="none";
+            Q20a.style.display="none";
+            Q21q.style.display="none";
+            Q21a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q18">Do you meet on Zoom?</label>
+      <input type="radio" id="check3" onclick="display2('check3')" name="Q18" value = "Yes">Yes 
+      <input type="radio" id="check4" onclick="disappear2('check4')" name="Q18" value = "No">No <br>
+
+      <label for="Q19" id = "Q19q">What is the meeting ID?</label>
+      <input type="text" id = "Q19a" name="Q19"><br>
+
+      <label for="Q20" id = "Q20q">What is the password for the meeting?</label>
+      <input type="text" id = "Q20a" name="Q20"><br>
+
+      <label for="Q21" id = "Q21q">What time will they take place?</label>
+      <input type="text" id = "Q21a" name="Q21"><br>
+
+      <script>
+        function display3(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q23q.style.display="inline";
+            Q23a.style.display="inline";
+            Q24q.style.display="inline";
+            Q24a.style.display="inline";
+          }
+        }
+  
+        function disappear3(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q23q.style.display="none";
+            Q23a.style.display="none";
+            Q24q.style.display="none";
+            Q24a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q22">Do you have labs?</label>
+      <input type="radio" id="check5" onclick="display3('check5')" name="Q22" value = "Yes">Yes 
+      <input type="radio" id="check6" onclick="disappear3('check6')" name="Q22" value = "No">No <br>
+
+      <p><label for="Q23" id = "Q23q">What is your lab policy?</label></p>
+      <textarea id = "Q23a" name="Q23" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+
+      <p><label for="Q24" id = "Q24q">What dates are the labs assigned and due?</label></p>
+      <textarea id = "Q24a" name="Q24" rows="4" cols="50" placeholder="For example: Lab 1: Assigned 02/02 Due 02/09 [enter] Lab 2: Assigned 02/11 Due 02/18 "></textarea><br>
+
+      <script>
+        function display4(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q26q.style.display="inline";
+            Q26a.style.display="inline";
+            Q27q.style.display="inline";
+            Q27a.style.display="inline";
+            Q28q.style.display="inline";
+            Q29q.style.display="inline";
+            Q29a.style.display="inline";
+            Q30q.style.display="inline";
+            Q30a.style.display="inline";
+          }
+        }
+  
+        function disappear4(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q26q.style.display="none";
+            Q26a.style.display="none";
+            Q27q.style.display="none";
+            Q27a.style.display="none";
+            Q28q.style.display="none";
+            Q29q.style.display="none";
+            Q29a.style.display="none";
+            Q30q.style.display="none";
+            Q30a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q25">Does your course have a discussion?
+      <input type="radio" id="check7" onclick="display4('check7')" name="Q25" value = "Yes">Yes 
+      <input type="radio" id="check8" onclick="disappear4('check8')" name="Q25" value = "No">No</label><br>
+
+      <p><label for="Q26" id = "Q26q">What is the discussion policy?</label></p>
+      <textarea id = "Q26a" name="Q26" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+
+      <p><label for="Q27" id = "Q27q">What dates are the discussions assigned and due?</label></p>
+      <textarea id = "Q27a" name="Q27" rows="4" cols="50" placeholder="For example: Discussion 1: Assigned 02/02 Due 02/09 [enter] Discussion 2: Assigned 02/11 Due 02/18 "></textarea><br>
+
+      <script>
+        function display5(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q29q.style.display="inline";
+            Q29a.style.display="inline";
+            Q30q.style.display="inline";
+            Q30a.style.display="inline";
+          }
+        }
+  
+        function disappear5(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q29q.style.display="none";
+            Q29a.style.display="none";
+            Q30q.style.display="none";
+            Q30a.style.display="none";
+          }
+        }
+
+      </script>
+
+      <label for="Q28" id = "Q28q" >Is there a discussion seminar?
+      <input type="radio" id ="check9" onclick="display5('check9')" name="Q28" value = "Yes">Yes
+      <input type="radio" id ="check10" onclick="disappear5('check10')" name="Q28" value = "No" checked>No</label><br>
+
+      <label for="Q29" id = "Q29q">What time is the discussion seminar?</label>
+      <input type="text" id= "Q29a" name="Q29"><br>
+
+      <label for="Q30" id = "Q30q">What is the location of the discussion seminar?</label>
+      <input type="text" id= "Q30a" name="Q30"><br>
+
+      <script>
+        function display6(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q32q.style.display="inline";
+            Q32a.style.display="inline";
+            Q33q.style.display="inline";
+            Q33a.style.display="inline";
+          }
+        }
+  
+        function disappear6(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q32q.style.display="none";
+            Q32a.style.display="none";
+            Q33q.style.display="none";
+            Q33a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q31">Does your course have assignments?
+        <input type="radio" id="check11" onclick="display6('check11')" name="Q31" value = "Yes">Yes 
+        <input type="radio" id="check12" onclick="disappear6('check12')" name="Q31" value = "No">No</label><br>
+  
+      <p><label for="Q32" id = "Q32q">What is the assignment policy?</label></p>
+      <textarea id = "Q32a" name="Q32" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+
+      <p><label for="Q33" id = "Q33q">What are the dates assigned and due for the homework?</label></p>
+      <textarea id = "Q33a" name="Q33" rows="4" cols="50" placeholder="For example: HW 1: Assigned 02/02 Due 02/09 [enter] HW 2: Assigned 02/11 Due 02/18 "></textarea><br>
+
+      <script>
+        function display7(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q35q.style.display="inline";
+            Q35a.style.display="inline";
+            Q36q.style.display="inline";
+            Q36a.style.display="inline";
+          }
+        }
+  
+        function disappear7(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q35q.style.display="none";
+            Q35a.style.display="none";
+            Q36q.style.display="none";
+            Q36a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q34">Does course have quizzes?
+        <input type="radio" id="check13" onclick="display7('check13')" name="Q34" value = "Yes">Yes 
+        <input type="radio" id="check14" onclick="disappear7('check14')" name="Q34" value = "No">No</label><br>
+  
+      <p><label for="Q35" id = "Q35q">What is the quiz policy?</label></p>
+      <textarea id = "Q35a" name="Q35" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+
+      <p><label for="Q36" id = "Q36q">What dates are the quizzes?</label></p>
+      <textarea id = "Q36a" name="Q36" rows="4" cols="50" placeholder="For example: Quiz 1: Assigned 02/02 Due 02/09 [enter] Quiz 2: Assigned 02/11 Due 02/18 "></textarea><br>
+
+      <script>
+        function display8(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q38q.style.display="inline";
+            Q38a.style.display="inline";
+            Q39q.style.display="inline";
+            Q39a.style.display="inline";
+          }
+        }
+  
+        function disappear8(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q38q.style.display="none";
+            Q38a.style.display="none";
+            Q39q.style.display="none";
+            Q39a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q37">Does your course have exams?
+        <input type="radio" id="check15" onclick="display8('check15')" name="Q37" value = "Yes">Yes 
+        <input type="radio" id="check16" onclick="disappear8('check16')" name="Q37" value = "No">No</label><br>
+  
+      <p><label for="Q38" id = "Q38q">What is the exam policy?</label></p>
+      <textarea id = "Q38a" name="Q38" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+
+      <p><label for="Q39" id = "Q39q">What dates are the exam?</label></p>
+      <textarea id = "Q39a" name="Q39" rows="4" cols="50" placeholder="For example: Exam 1: Assigned 02/02 Due 02/09 [enter] Exam 2: Assigned 02/11 Due 02/18 "></textarea><br>
+
+      <script>
+        function display9(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q41q.style.display="inline";
+            Q41a.style.display="inline";
+          }
+        }
+  
+        function disappear9(x){
+          var check = document.getElementById(x);
+          if (check.checked) {
+            Q41q.style.display="none";
+            Q41a.style.display="none";
+          }
+        }
+      </script>
+
+      <label for="Q40">Does your course have lectures?
+        <input type="radio" id="check17" onclick="display9('check17')" name="Q40" value = "Yes">Yes 
+        <input type="radio" id="check18" onclick="disappear9('check18')" name="Q40" value = "No">No</label><br>
+
+      <p><label for="Q41" id = "Q41q">What dates do lectures take place on?</label></p>
+      <textarea id = "Q41a" name="Q41" rows="4" cols="50" placeholder="For example: Lecture 1: Assigned 02/02 Due 02/09 [enter] Lecture 2: Assigned 02/11 Due 02/18 "></textarea><br>
+      
+      <label for="Q42">Will you be updating the syllabus?
+        <input type="radio" id="check19" name="Q42" value = "Yes">Yes 
+        <input type="radio" id="check20" name="Q42" value = "No">No</label><br>
+
+        <script>
+          function display10(x){
+            var check = document.getElementById(x);
+            if (check.checked) {
+              Q44q.style.display="inline";
+              Q44a.style.display="inline";
+            }
+          }
+      
+          function disappear10(x){
+            var check = document.getElementById(x);
+            if (check.checked) {
+              Q44q.style.display="none";
+              Q44a.style.display="none";
+            }
+          }
+        </script>
+    
+        <label for="Q43">Does your course have any prerequisites?
+          <input type="radio" id="check21" onclick="display10('check21')" name="Q43" value = "Yes">Yes 
+          <input type="radio" id="check22" onclick="disappear10('check22')" name="Q43" value = "No">No</label><br>
+      
+          <p><label for="Q44" id = "Q44q">What is the prerequisites of this course</label></p>
+          <textarea id = "Q44a" name="Q44" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+  
+        <script>
+          function display11(x){
+            var check = document.getElementById(x);
+            if (check.checked) {
+              Q46q.style.display="inline";
+              Q46a.style.display="inline";
+              Q47q.style.display="inline";
+              Q47a.style.display="inline";
+            }
+          }
+        
+          function disappear11(x){
+            var check = document.getElementById(x);
+            if (check.checked) {
+              Q46q.style.display="none";
+              Q46a.style.display="none";
+              Q47q.style.display="none";
+              Q47a.style.display="none";
+            }
+          }
+        </script>
+      
+        <label for="Q45">Does this course use any textbook?
+          <input type="radio" id="check23" onclick="display11('check23')" name="Q45" value = "Yes">Yes 
+          <input type="radio" id="check24" onclick="disappear11('check24')" name="Q45" value = "No">No</label><br>
+        
+          <label for="Q46" id = "Q46q">What is the textbook title?</label>
+          <input type="text" id = "Q46a" name="Q46"><br>
+  
+          <label for="Q47" id = "Q47q">What is the textbook ISBN?</label>
+          <input type="text" id = "Q47a" name="Q47"><br>
+
+          <script>
+            function display12(x){
+              var check = document.getElementById(x);
+              if (check.checked) {
+                Q49q.style.display="inline";
+                Q49a.style.display="inline";
+              }
+            }
+                  
+            function disappear12(x){
+              var check = document.getElementById(x);
+              if (check.checked) {
+                  Q49q.style.display="none";
+                  Q49a.style.display="none";
+              }
+            }
+          </script>
+
+          <label for="Q48">Would you like to include the learning object of the course?
+            <input type="radio" id="check25" onclick="display12('check25')" name="Q48" value = "Yes">Yes 
+            <input type="radio" id="check26" onclick="disappear12('check26')" name="Q48" value = "No">No</label><br>
+        
+            <p><label for="Q49" id = "Q49q">What is the course learning objective</label></p>
+            <textarea id = "Q49a" name="Q49" rows="4" cols="50" ></textarea><br>
+  
+            <p><label for="Q50">Insert the expectation of the students</label></p>
+            <textarea name="Q50" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+          
+            <label for="Q51">Does your course grades in percentages or points?
+              <input type="radio" id="check27"  name="Q51" value = "Percentages">Percentages
+              <input type="radio" id="check28"  name="Q51" value = "Points">Points</label><br>
+            
+              <p><label for="Q52">What is the grading scale?</label></p>
+              <textarea name="Q52" rows="4" cols="50" required></textarea><br>
+        
+          <script>
+            function display13(x){
+              var check = document.getElementById(x);
+              if (check.checked) {
+                Q54q.style.display="inline";
+                Q54a.style.display="inline";
+              }
+            }
+                  
+            function disappear13(x){
+              var check = document.getElementById(x);
+              if (check.checked) {
+                  Q54q.style.display="none";
+                  Q54a.style.display="none";
+              }
+            }
+          </script>
+                
+            <label for="Q53">Are you going to provide online resources?
+              <input type="radio" id="check29" onclick="display13('check29')" name="Q53" value = "Yes">Yes
+              <input type="radio" id="check30" onclick="disappear13('check30')" name="Q53" value = "No">No</label><br>
+                  
+              <label for="Q54" id = "Q54q">What are the links to the resources?</label>
+              <input type="text" id = "Q54a" name="Q54"><br>
+        
+              <script>
+                function display14(x){
+                  var check = document.getElementById(x);
+                  if (check.checked) {
+                      Q56q.style.display="inline";
+                      Q56a.style.display="inline";
+                  }
+                }
+                          
+                function disappear14(x){
+                  var check = document.getElementById(x);
+                  if (check.checked) {
+                      Q56q.style.display="none";
+                      Q56a.style.display="none";
+                  }
+                }
+                </script>
+                        
+                  <label for="Q55">Will there be extra credit?
+                    <input type="radio" id="check31" onclick="display14('check31')" name="Q55" value = "Yes">Yes
+                    <input type="radio" id="check32" onclick="disappear14('check32')" name="Q55" value = "No">No</label><br>
+                          
+                      <p><label for="Q56" id = "Q56q">What is the extra credit policy?</label></p>
+                      <textarea id = "Q56a" name="Q56" rows="4" cols="50" placeholder="Suggested format in paragraph form..."></textarea><br>
+      
+                <p><label for="Q57" >What is the course final exam policy?</label></p>
+                <textarea name="Q57" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+      
+                <p><label for="Q58" >What is your University withdrawal policy?</label></p>
+                <textarea name="Q58" rows="4" cols="50" placeholder="Suggested format in paragraph form..." required></textarea><br>
+
+          <!-- Course schedule table -->
+
+          <p><b>Click Submit when you are done with the question and have a excel schedule!</b></p>
+
+      <input type="submit" name="save" value="Submit" id = "saveBtn">
+
+    <h1>Course Schedule</h1>
+
+    <form>
+      <label for="date">Date (mm/dd/yyyy):</label>
+      <input type="text" id="date" name="date"><br><br>
+
+      <label for="topic">Topic:</label>
+      <input type="text" id="topic" name="topic"><br><br>
+
+      <label for="assignment">Assignment on this date?:</label>
+      <input type="text" id="assignment" name="assignment"><br><br>
+
+      <label for="lab">Lab:</label>
+      <input type="text" id="lab" name="lab"><br><br>
+
+      <label for="discussion">Discussion on this date?:</label>
+      <input type="text" id="discussion" name="discussion"><br><br>
+
+      <label for="quiz">Quiz on this date?:</label>
+      <input type="text" id="quiz" name="quiz"><br><br>
+
+      <label for="exam">Exam on this date?:</label>
+      <input type="text" id="exam" name="exam"><br><br>
+
+      <button type="button" onclick="addRow()">Add to Table</button>
+    </form>
+    <br><br>
+    <table id="schedule">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Topic</th>
+          <th id = "assignmentHeader">Assignment Due</th>
+          <th id = "labHeader">Lab Due</th>
+          <th id = "discussionHeader">Discussion</th>
+          <th id = "quizHeader">Quiz</th>
+          <th id = "examHeader">Exam</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <input type="button" onclick="removeRow()" value="Remove row">
+    <input type="button" id="export" onclick="toExcel('xlsx')" value="Export to Excel"> 
+      
+    </form>
+  </body>
+</html>
