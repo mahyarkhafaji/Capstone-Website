@@ -12,9 +12,11 @@ if (isset($_POST["submit"])) {
 
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        $command = escapeshellcmd('python D:/wamp64/www/Web/textbook.py');
-        $output = shell_exec($command);
-        echo $output;
+        //$command = escapeshellcmd('python D:/wamp64/www/Web/textbook.py');
+        //$output = shell_exec($command);
+        //echo $output;
+        echo shell_exec("python textbook.py");
+        header("Location: http://localhost/web/finalText.html");
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
