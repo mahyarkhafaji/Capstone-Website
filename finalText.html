@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>IT 445 Capstone</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large" style="background-color:rgb(69, 0, 132);color:white">
+    <a href="students.php" class="w3-bar-item w3-button w3-padding-large w3-white"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="buttonpng" width="25"/></a>
+    <a href="syllabus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Upload Syllabus</a>
+    <a href="calender.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calender</a>
+    <a href="textbook.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Find Textbook</a>
+    <a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-display-topright">Logout</a>
+</div><!DOCTYPE html>
+<!--[if lt IE 7 ]>             <html class=" no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]>                <html class=" no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]>                <html class=" no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]>                <html class=" no-js ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <link crossorigin="" href="https://www.google-analytics.com" rel="preconnect"/>
+  <link crossorigin="" href="https://www.googletagmanager.com" rel="preconnect"/>
+  <link crossorigin="" href="https://c932109.ssl.cf2.rackcdn.com" rel="preconnect"/>
+  <link crossorigin="" href="https://images-na.ssl-images-amazon.com" rel="preconnect"/>
+  <link crossorigin="" href="https://code.jquery.com" rel="preconnect"/>
+  <link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
+  <script>
+   (function(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d+)/.test(ua))?('ie ie'+RegExp.$1):is('rv:11.0')?g+' ie ie11':is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':''];c=b.join(' ');h.className=h.className.replace(/\bno-js\b/,'js');h.className += ' '+c; return c;})(navigator.userAgent)
+  </script>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N3RVN67');
+  </script>
+  <script>
+   (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4020486", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  </script>
+  <meta content="Cheapest Textbooks" name="author"/>
+  <meta content="app-id=com.cheapesttextbooks" name="google-play-app"/>
+  <meta content="app-id=com.cheapesttextbooks" name="google-play-app-tab"/>
+  <title>
+   , ISBN: 9780077221430, 0077221435 - CheapestTextbooks.com
+  </title>
+  <meta content="ISBN 9780077221430 - Get FREE shipping offers and dollar off coupons with our price comparison for  - ISBN 9780077221430, 0077221435." name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="no-cache" name="pragma"/>
+  <meta content="no-cache" name="cache-control"/>
+  <meta content="index, follow" name="GOOGLEBOT"/>
+  <meta content="index, follow" name="robots"/>
+  <link href="https://c932109.ssl.cf2.rackcdn.com/CSS/acb6c3b.css" media="screen" rel="stylesheet"/>
+  <link href="https://c932109.ssl.cf2.rackcdn.com/searchplugin.xml" rel="search" title="CheapestTextbooks.com" type="application/opensearchdescription+xml"/>
+  <link href="https://c932109.ssl.cf2.rackcdn.com/apple-touch-icon.png?v=KmbLz9l5Pb" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="https://c932109.ssl.cf2.rackcdn.com/favicon-32x32.png?v=KmbLz9l5Pb" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="https://c932109.ssl.cf2.rackcdn.com/android-chrome-192x192.png?v=KmbLz9l5Pb" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="https://c932109.ssl.cf2.rackcdn.com/favicon-16x16.png?v=KmbLz9l5Pb" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <link color="#5bbad5" href="https://c932109.ssl.cf2.rackcdn.com/safari-pinned-tab.svg?v=KmbLz9l5Pb" rel="mask-icon"/>
+  <link href="https://www.cheapesttextbooks.com/favicon.ico?v=KmbLz9l5Pb" rel="shortcut icon"/>
+  <meta content="https://c932109.ssl.cf2.rackcdn.com/browserconfig.xml?v=KmbLz9l5Pb" name="msapplication-config"/>
+  <meta content="#658e4f" name="theme-color"/>
+  <script type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "@id" : "https://www.cheapesttextbooks.com/#org",
+      "name": "Cheapest Textbooks",
+      "url" : "https://www.cheapesttextbooks.com/",
+      "logo" : "https://www.cheapesttextbooks.com/images/ui/cheapest-textbooks.jpg",
+      "sameAs": [
+        "https://www.instagram.com/cheapesttextbooks/",
+        "http://www.twitter.com/CheapTextbooks",
+        "http://www.youtube.com/thecheapesttextbooks",
+        "https://www.facebook.com/FBcheapesttextbooks/"
+      ]
+    },{
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.cheapesttextbooks.com/#site",
+      "name": "Cheapest Textbooks",
+      "url": "https://www.cheapesttextbooks.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.cheapesttextbooks.com/IM/?keyval={search_term_string}&utm_source=google&utm_medium=sitelinksearchbox&utm_campaign=Site-Link-Searchbox",
+        "query-input": "required name=search_term_string"
+      }
+    }
+]}
+  </script>
+ </head>
+ <body class="pc">
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-N3RVN67" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <div id="wrapper">
+   <div id="header1">
+    <div>
+     <a href="https://www.cheapesttextbooks.com/" title="Cheap Textbooks">
+      <img alt="Compare prices and save on cheap textbooks at CheapestTextbooks.com" height="65" src="https://c932109.ssl.cf2.rackcdn.com/images/ui/cheapest-textbooks.jpg" width="390"/>
+     </a>
+    </div>
+    <div id="apps">
+     <a href="https://www.amazon.com/gp/student/signup/info/?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;linkCode=ur2&amp;tag=warptoestores-20" rel="noopener" target="_blank" title="Find out about free shipping with 'Amazon Student'">
+      <img alt="Signup for 'Amazon Student'" height="80" src="https://c932109.ssl.cf2.rackcdn.com/images/ui/promo_amazon_student.png" width="219"/>
+     </a>
+    </div>
+    <input class="checkbox-hack" id="black-menu" type="checkbox"/>
+    <div id="header2">
+     <ul class="links l">
+      <li class="black-menu social">
+       <label class="icon-menu" for="black-menu" onclick="" title="More">
+       </label>
+      </li>
+     </ul>
+     <ul class="links r">
+      <li class="first">
+       <a href="https://www.cheapesttextbooks.com/buy-cheap-textbooks.html" title="Buy Cheap Textbooks.">
+        Buy Textbooks
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/rent-cheap-textbooks.html" title="Rent Cheap Textbooks.">
+        Rent Textbooks
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/sell-textbooks-for-highest-price.html" title="Sell Textbooks for Highest Price.">
+        Sell Textbooks
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/all-textbook-subjects.html" title="Textbook Subjects.">
+        Textbook Subjects
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/collegeknowledge/faq/" title="Check out these Frequently Asked Questions.">
+        FAQs
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/collegeknowledge/" title="Check out the Cheapest Textbooks Blog.">
+        Blog
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div id="header3">
+    <form action="https://www.cheapesttextbooks.com/IM/" class="searchBar box-shadow" method="get" name="search">
+     <div class="search">
+      <input autocomplete="OFF" autofocus="" class="searchTerm placeholder required" name="keyval" placeholder="Search by ISBN, Title, Author, Keyword" required="" title="In order for us to find your book, you'll need to enter an ISBN, Title, Author or Keyword in the search bar" type="text">
+       <input class="searchButton" type="submit" value="search"/>
+       <input name="submit" type="hidden" value="1"/>
+      </input>
+     </div>
+    </form>
+   </div>
+   <div class="gui-holder">
+    <div class="gui-dialog" id="loader">
+     <p class="h3">
+      <span class="animate-spin icon-arrows-cw h5">
+      </span>
+      Gathering data for you
+     </p>
+     <p class="h6">
+      Our Price Comparison is FREE to use. You are moments away from:
+     </p>
+     <ul>
+      <li>
+       Buy, Rent or Sell
+      </li>
+      <li>
+       New, Used, Rental, eBooks
+      </li>
+      <li>
+       Finding the Cheapest Prices
+      </li>
+      <li>
+       Saving up to 95%
+      </li>
+     </ul>
+     <div class="rotate box-shadow">
+      Check out
+      <p class="headText">
+       our fan page on
+      </p>
+      <p class="h3">
+       <span class="icon-facebook-rect">
+       </span>
+       facebook
+      </p>
+      <p class="headText">
+       for additional ways to save.
+      </p>
+     </div>
+    </div>
+   </div>
+   <style>
+    #loader { display: none; }
+p.oldFilter { margin: 0; }
+#ps { margin: .5em auto 1em; }
+   </style>
+   <div id="breadcrumbs">
+    <ol class="crumbs" itemid="#crumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+     <li class="first" itemid="#crumb1" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+      <a class="icon-home" href="https://www.cheapesttextbooks.com/" itemprop="item" itemtype="https://schema.org/Thing" title="Cheap Textbooks">
+       <span itemprop="name">
+        Cheap Textbooks
+       </span>
+      </a>
+      <meta content="1" itemprop="position">
+      </meta>
+     </li>
+     <li itemid="#crumb2" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+      <a href="https://www.cheapesttextbooks.com/all-textbook-subjects.html" itemprop="item" itemtype="https://schema.org/Thing" title="Textbook Subjects">
+       <span itemprop="name">
+        Textbook Subjects
+       </span>
+      </a>
+      <meta content="2" itemprop="position">
+      </meta>
+     </li>
+     <li itemid="#crumb3" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+      <a href="/IM/?keyval=978-0-07-722143-0" itemprop="item" itemtype="https://schema.org/Thing" title="Fundamentals of Digital Logic with VHDL Design with CD-ROM">
+       <span itemprop="name">
+        Fundamentals of Digital Logic with VHDL Design with CD-ROM
+       </span>
+      </a>
+      <meta content="3" itemprop="position">
+      </meta>
+     </li>
+    </ol>
+   </div>
+   <script>
+    document.title = "Fundamentals of Digital Logic with VHDL Design with CD-ROM, ISBN: 9780077221430, 0077221435 - CheapestTextbooks.com";
+var fbImg = '<img height="75" src="https://m.media-amazon.com/images/I/51JOnSa-FqL._SL75_.jpg" width="59" alt="Fundamentals of Digital Logic with VHDL Design with CD-ROM" />';
+   </script>
+   <div class="product" itemscope="" itemtype="http://schema.org/Product">
+    <meta content="Fundamentals of Digital Logic with VHDL Design with CD-ROM, ISBN: 9780077221430, 0077221435 - CheapestTextbooks.com" itemprop="description">
+     <h1 itemprop="name">
+      <a href="https://www.cheapesttextbooks.com/subjects/Fundamentals-of-Digital-Logic-with-VHDL-Design-with-CD-ROM-9780077221430.html" itemprop="url" title="Fundamentals of Digital Logic with VHDL Design with CD-ROM">
+       Fundamentals of Digital Logic with VHDL Design with CD-ROM
+      </a>
+     </h1>
+     <div class="product_card large">
+      <div class="image">
+       <img alt="Fundamentals of Digital Logic with VHDL Design with CD-ROM" class="small" height="75" itemprop="image" onerror="this.onerror=null;this.src='https://c932109.ssl.cf2.rackcdn.com/images/ui/n-a.small.jpg';" src="https://m.media-amazon.com/images/I/51JOnSa-FqL._SL75_.jpg" width="59"/>
+       <img alt="Fundamentals of Digital Logic with VHDL Design with CD-ROM" class="medium" height="160" itemprop="image" onerror="this.onerror=null;this.src='https://c932109.ssl.cf2.rackcdn.com/images/ui/n-a.medium.jpg';" src="https://m.media-amazon.com/images/I/51JOnSa-FqL._SL160_.jpg" width="126"/>
+      </div>
+      <div class="details">
+       <input aria-label="Authors List" class="checkbox-hack author-menu" id="author-menu-9780077221430" type="checkbox"/>
+       <dl class="pc_list">
+        <dt>
+        </dt>
+        <dd>
+         Hardcover
+        </dd>
+        <dt>
+         Edition:
+        </dt>
+        <dd class="edition">
+         3
+        </dd>
+        <dt class="authors">
+         <label class="checkbox-hack" for="author-menu-9780077221430" onclick="" title="More">
+          Author:
+          <span class="icon-down-dir">
+          </span>
+         </label>
+        </dt>
+        <dd class="authors first">
+         <a href="https://www.cheapesttextbooks.com/IM/?keyval=%20Stephen%20Brown;submit=1;key=Author">
+          Stephen Brown
+         </a>
+        </dd>
+        <dd class="authors">
+         <a href="https://www.cheapesttextbooks.com/IM/?keyval=%20%20Zvonko%20Vranesic;submit=1;key=Author">
+          Zvonko Vranesic
+         </a>
+        </dd>
+        <dt>
+         Publisher:
+        </dt>
+        <dd class="publisher" itemprop="brand">
+         McGraw Hill
+        </dd>
+        <dt>
+         Release Date:
+        </dt>
+        <dd>
+         2008
+        </dd>
+        <dt>
+         ISBN-10:
+        </dt>
+        <dd class="isbn10">
+         <a alt="Fundamentals of Digital Logic with VHDL Design with CD-ROM 0077221435" content="0077221435" href="https://www.cheapesttextbooks.com/subjects/Fundamentals-of-Digital-Logic-with-VHDL-Design-with-CD-ROM-9780077221430.html" itemprop="sku" title="Fundamentals of Digital Logic with VHDL Design with CD-ROM 0077221435">
+          0077221435
+         </a>
+        </dd>
+        <dt>
+         ISBN-13:
+        </dt>
+        <dd class="isbn13">
+         <a alt="Fundamentals of Digital Logic with VHDL Design with CD-ROM 9780077221430" content="9780077221430" href="https://www.cheapesttextbooks.com/subjects/Fundamentals-of-Digital-Logic-with-VHDL-Design-with-CD-ROM-9780077221430.html" itemprop="gtin13" title="Fundamentals of Digital Logic with VHDL Design with CD-ROM 9780077221430">
+          9780077221430
+         </a>
+        </dd>
+        <dt>
+         List Price:
+        </dt>
+        <dd class="strike">
+         $304.95
+        </dd>
+       </dl>
+       <div id="calc">
+        <label class="checkbox-hack multi-line-button" for="calculator" onclick="">
+         <p class="h4">
+          We recommend that you
+         </p>
+         <p class="sup-title headText recommend" data-calculation="Buy">
+          Buy
+         </p>
+         <p class="sub-title">
+          Click here to find out why
+         </p>
+        </label>
+        <input class="checkbox-hack" id="calculator" name="calculator" type="checkbox"/>
+        <div class="gui-dialog box-shadow buy">
+         <p class="h2 gui-dialog-head">
+          Buy vs Rent:
+          <span class="center g60">
+           We recommend you
+           <span class="headText recommend" data-calculation="Buy">
+            Buy
+           </span>
+          </span>
+          <label class="checkbox-hack close icon-cancel" for="calculator" onclick="">
+          </label>
+         </p>
+         <p>
+          This tool helps you determine if you should buy or rent your textbooks, based on the total cost of ownership including current sell back value.
+         </p>
+         <dl class="pc_list g40">
+          <dt>
+          </dt>
+          <dd class="gold">
+           Buy
+          </dd>
+          <dt>
+           Price:
+          </dt>
+          <dd id="calcBuyPrice">
+           $9.01
+          </dd>
+          <dt>
+           Condition:
+          </dt>
+          <dd id="calcCond">
+           Used
+          </dd>
+          <dt>
+           Sell Price:
+          </dt>
+          <dd class="sellPrice" data-price="500" id="calcSellPrice">
+           $5.00
+          </dd>
+          <dt>
+           Final Cost:
+          </dt>
+          <dd class="price" id="calcFinal">
+           $4.01
+          </dd>
+         </dl>
+         <p class="g20">
+          VS
+         </p>
+         <dl class="pc_list g40">
+          <dt>
+          </dt>
+          <dd class="gold">
+           Rent
+          </dd>
+          <dt>
+           Price:
+          </dt>
+          <dd data-price="1698" id="calcRentPrice">
+           $16.98
+          </dd>
+          <dt>
+           Duration:
+          </dt>
+          <dd data-duration="1698" id="calcDuration">
+           52 Days
+          </dd>
+          <dt>
+           Sell Price:
+          </dt>
+          <dd class="sellPrice">
+           None
+          </dd>
+          <dt>
+           Final Cost:
+          </dt>
+          <dd id="calcRentFinal">
+           $16.98
+          </dd>
+         </dl>
+         <p>
+         </p>
+         <dl class="pc_list duration">
+          <dt>
+          </dt>
+          <dd class="gold">
+           Will you buy a new or used book?
+          </dd>
+          <dt>
+           <label for="calc-nu1" onclick="" title="Buy New">
+            New Book
+           </label>
+          </dt>
+          <dd>
+           <input class="calcOptions" data-price="" id="calc-nu1" name="new_used" type="radio" value="New"/>
+          </dd>
+          <dt>
+           <label for="calc-nu2" onclick="" title="Buy Used">
+            Used Book
+           </label>
+          </dt>
+          <dd>
+           <input class="calcOptions" data-price="" id="calc-nu2" name="new_used" type="radio" value="Used"/>
+          </dd>
+          <dt>
+           <label for="calc-nu3" onclick="" title="Buy Cheapest">
+            Cheapest Book
+           </label>
+          </dt>
+          <dd>
+           <input checked="checked" class="calcOptions" data-price="901" id="calc-nu3" name="new_used" type="radio" value="Used"/>
+          </dd>
+         </dl>
+         <dl class="pc_list duration">
+          <dt>
+          </dt>
+          <dd class="gold">
+           How long of a rental duration do you need?
+          </dd>
+          <dt>
+           <label for="calc-d1" onclick="" title="Semester">
+            Semester ( Day)
+           </label>
+          </dt>
+          <dd>
+           <input checked="checked" class="calcOptions" data-duration="" data-price="" id="calc-d1" name="duration" type="radio" value="Semester"/>
+          </dd>
+          <dt>
+           <label for="calc-d2" onclick="" title="Quarter">
+            Quarter ( Day)
+           </label>
+          </dt>
+          <dd>
+           <input class="calcOptions" data-duration="" data-price="" id="calc-d2" name="duration" type="radio" value="Quarter"/>
+          </dd>
+          <dt>
+           <label for="calc-d3" onclick="" title="Session">
+            Session ( Day)
+           </label>
+          </dt>
+          <dd>
+           <input checked="checked" class="calcOptions" data-duration="" data-price="" id="calc-d3" name="duration" type="radio" value="Session"/>
+          </dd>
+         </dl>
+         <dl class="pc_list duration">
+          <dt>
+          </dt>
+          <dd class="gold">
+           Would you like to keep the book?
+          </dd>
+          <dt>
+           <label for="calc-k1" onclick="" title="Keep the book">
+            Keep the book
+           </label>
+          </dt>
+          <dd>
+           <input id="calc-k1" name="keep" type="radio" value="keep"/>
+          </dd>
+          <dt>
+           <label for="calc-k2" onclick="" title="Sell the book">
+            Sell the book
+           </label>
+          </dt>
+          <dd>
+           <input checked="checked" id="calc-k2" name="keep" type="radio" value="sell"/>
+          </dd>
+         </dl>
+         <p class="h7">
+          Disclaimer: These calculations are based on the current advertised price. Your results will vary depending on several factors, including the condition of the book and the advertised price at the time of sale.
+         </p>
+        </div>
+        <label class="checkbox-hack gui-overlay" for="calculator" onclick="">
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="product_card quick">
+      <fieldset class="quickPrice accordion" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+       <meta content="USD" itemprop="priceCurrency">
+        <legend class="h2">
+         Cheapest
+         <span class="headText">
+          Price
+         </span>
+         Summary
+        </legend>
+        <input class="checkbox-hack" id="input-accord-buy" name="tab" type="checkbox"/>
+        <label class="checkbox-hack" for="input-accord-buy" id="label-accord-buy">
+         <span class="sup-title symbol-down-open">
+          Buy
+         </span>
+         <span class="sub-title">
+          From
+          <span class="price">
+           $9.01
+          </span>
+         </span>
+        </label>
+        <div class="article" id="article-buy">
+         <div class="used">
+          <div class="g60 pt-icon mkt">
+           <p>
+            Used:
+            <span class="price">
+             $9.01
+            </span>
+           </p>
+           <span class="store-icon-abebooks">
+           </span>
+           <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            Abebooks
+            <br/>
+            (Marketplace)
+           </a>
+          </div>
+          <div class="g40 quick_list">
+           <dl class="pc_list">
+            <dt>
+             Price:
+            </dt>
+            <dd>
+             $5.26
+            </dd>
+            <dt>
+             Shipping:
+            </dt>
+            <dd>
+             $3.75
+            </dd>
+            <dt>
+             Total:
+            </dt>
+            <dd class="price">
+             $9.01
+            </dd>
+           </dl>
+          </div>
+          <div class="g40 button">
+           <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            <span class="sup-title">
+             Buy Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </div>
+         <div class="new">
+          <div class="g60 pt-icon mkt">
+           <p>
+            New:
+            <span class="price">
+             $72.38
+            </span>
+           </p>
+           <span class="store-icon-abebooks">
+           </span>
+           <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            Abebooks
+            <br/>
+            (Marketplace)
+           </a>
+          </div>
+          <div class="g40 quick_list">
+           <dl class="pc_list">
+            <dt>
+             Price:
+            </dt>
+            <dd>
+             $70.38
+            </dd>
+            <dt>
+             Shipping:
+            </dt>
+            <dd>
+             $2.00
+            </dd>
+            <dt>
+             Total:
+            </dt>
+            <dd class="price">
+             $72.38
+            </dd>
+           </dl>
+          </div>
+          <div class="g40 button">
+           <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            <span class="sup-title">
+             Buy Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+        <input class="checkbox-hack" id="input-accord-rent" name="tab" type="checkbox"/>
+        <label class="checkbox-hack" for="input-accord-rent" id="label-accord-rent">
+         <span class="sup-title symbol-down-open">
+          Rent
+         </span>
+         <span class="sub-title">
+          From
+          <span class="price">
+           $16.98
+          </span>
+         </span>
+        </label>
+        <div class="article" id="article-rent">
+         <div class="semester">
+          <div class="g60 pt-icon">
+           <p>
+            Semester Rental:
+            <span class="price">
+             $126.10
+            </span>
+           </p>
+           <span class="store-icon-efollett">
+           </span>
+           <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+            eFollett
+           </a>
+          </div>
+          <div class="g40 quick_list">
+           <dl class="pc_list">
+            <dt>
+             Price:
+            </dt>
+            <dd>
+             $126.10
+            </dd>
+            <dt>
+             Shipping:
+            </dt>
+            <dd>
+             $0.00
+            </dd>
+            <dt>
+             Total:
+            </dt>
+            <dd class="price">
+             $126.10
+            </dd>
+           </dl>
+          </div>
+          <div class="g40 button">
+           <a aria-label="Find this price at eFollett" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+            <span class="sup-title">
+             Rent Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </div>
+         <div class="session">
+          <div class="g60 pt-icon">
+           <p>
+            55 Day Rental:
+            <span class="price">
+             $16.98
+            </span>
+           </p>
+           <span class="store-icon-chegg">
+           </span>
+           <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+            Chegg
+           </a>
+          </div>
+          <div class="g40 quick_list">
+           <dl class="pc_list">
+            <dt>
+             Price:
+            </dt>
+            <dd>
+             $11.99
+            </dd>
+            <dt>
+             Shipping:
+            </dt>
+            <dd>
+             $4.99
+            </dd>
+            <dt>
+             Total:
+            </dt>
+            <dd class="price">
+             $16.98
+            </dd>
+           </dl>
+          </div>
+          <div class="g40 button">
+           <a aria-label="Find this price at Chegg" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+            <span class="sup-title">
+             Rent Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+        <input class="checkbox-hack" id="input-accord-sell" name="tab" type="checkbox"/>
+        <label class="checkbox-hack" for="input-accord-sell" id="label-accord-sell">
+         <span class="sup-title symbol-down-open">
+          Sell Back
+         </span>
+         <span class="sub-title">
+          For
+          <span class="sellPrice">
+           $5.00
+          </span>
+         </span>
+        </label>
+        <div class="article" id="article-sell">
+         <div class="sell">
+          <div class="g60 pt-icon">
+           <p>
+            Sell Back:
+            <span class="sellPrice">
+             $5.00
+            </span>
+           </p>
+           <span class="store-icon-ecampus">
+           </span>
+           <a aria-label="Find this price at eCampus" class="prevDef ecampus_sell" href="https://www.cheapesttextbooks.com/ecampus/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at eCampus">
+            eCampus
+           </a>
+          </div>
+          <div class="g40 quick_list">
+           <dl class="pc_list">
+            <dt>
+             Price:
+            </dt>
+            <dd>
+             $5.00
+            </dd>
+            <dt>
+             Shipping:
+            </dt>
+            <dd>
+             $0.00
+            </dd>
+            <dt>
+             Total:
+            </dt>
+            <dd class="sellPrice">
+             $5.00
+            </dd>
+           </dl>
+          </div>
+          <div class="g40 button">
+           <a aria-label="Find this price at eCampus" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/ecampus/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at eCampus">
+            <span class="sup-title">
+             Sell Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+        <span content="4" itemprop="offerCount">
+        </span>
+        <span content="9.01" itemprop="lowPrice">
+        </span>
+        <span content="236.50" itemprop="highPrice">
+        </span>
+       </meta>
+      </fieldset>
+     </div>
+     <div class="tabs" id="newfilter">
+      <table class="price-table quick">
+       <thead>
+        <tr>
+         <th class="text-left price" colspan="7">
+          <h3>
+           Cheapest
+           <span class="headText">
+            Price
+           </span>
+           Summary
+          </h3>
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr class="gold">
+         <th colspan="2">
+          Store
+         </th>
+         <th class="pt-condition">
+          Condition
+         </th>
+         <th class="pt-coupon">
+          Coupons &amp; Deals
+         </th>
+         <th class="pt-age">
+          Price
+         </th>
+         <th class="pt-shipping">
+          Shipping
+         </th>
+         <th class="pt-total">
+          Total
+         </th>
+        </tr>
+        <tr class="pt-odd">
+         <td class="pt-icon">
+          <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+           <span class="store-icon-abebooks">
+           </span>
+          </a>
+         </td>
+         <td class="pt-store">
+          <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+           Abebooks
+           <br/>
+           (Marketplace)
+          </a>
+          <div class="condition">
+           Used
+          </div>
+         </td>
+         <td class="pt-condition">
+          Used
+         </td>
+         <td class="pt-coupon stopProp">
+         </td>
+         <td class="pt-age">
+          <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+           <span class="price">
+            $5.26
+           </span>
+          </a>
+          <br/>
+          <span class="age">
+           as of 6 minutes ago
+          </span>
+         </td>
+         <td class="pt-shipping">
+          $3.75
+         </td>
+         <td class="pt-total">
+          <div class="g30">
+           <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            <span class="price">
+             $9.01
+            </span>
+           </a>
+          </div>
+          <div class="g66">
+           <span class="pt-percent">
+            98% off
+           </span>
+           <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            <span class="title">
+             $9.01
+            </span>
+            <span class="sup-title">
+             Buy Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </td>
+        </tr>
+        <tr class="pt-even">
+         <td class="pt-icon">
+          <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+           <span class="store-icon-abebooks">
+           </span>
+          </a>
+         </td>
+         <td class="pt-store">
+          <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+           Abebooks
+           <br/>
+           (Marketplace)
+          </a>
+          <div class="condition">
+           New
+          </div>
+         </td>
+         <td class="pt-condition">
+          New
+         </td>
+         <td class="pt-coupon stopProp">
+         </td>
+         <td class="pt-age">
+          <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+           <span class="price">
+            $70.38
+           </span>
+          </a>
+          <br/>
+          <span class="age">
+           as of 6 minutes ago
+          </span>
+         </td>
+         <td class="pt-shipping">
+          $2.00
+         </td>
+         <td class="pt-total">
+          <div class="g30">
+           <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            <span class="price">
+             $72.38
+            </span>
+           </a>
+          </div>
+          <div class="g66">
+           <span class="pt-percent">
+            77% off
+           </span>
+           <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+            <span class="title">
+             $72.38
+            </span>
+            <span class="sup-title">
+             Buy Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </td>
+        </tr>
+        <tr class="pt-odd">
+         <td class="pt-icon">
+          <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+           <span class="store-icon-efollett">
+           </span>
+          </a>
+         </td>
+         <td class="pt-store">
+          <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+           eFollett
+          </a>
+          <div class="condition">
+           Semester Rental
+          </div>
+         </td>
+         <td class="pt-condition">
+          Semester Rental
+         </td>
+         <td class="pt-coupon stopProp">
+         </td>
+         <td class="pt-age">
+          <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+           <span class="price">
+            $126.10
+           </span>
+          </a>
+          <br/>
+          <span class="age">
+           as of 36 minutes ago
+          </span>
+         </td>
+         <td class="pt-shipping">
+          <em>
+           FREE
+          </em>
+         </td>
+         <td class="pt-total">
+          <div class="g30">
+           <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+            <span class="price">
+             $126.10
+            </span>
+           </a>
+          </div>
+          <div class="g66">
+           <span class="pt-percent">
+            59% off
+           </span>
+           <a aria-label="Find this price at eFollett" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+            <span class="title">
+             $126.10
+            </span>
+            <span class="sup-title">
+             Rent Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </td>
+        </tr>
+        <tr class="pt-odd">
+         <td class="pt-icon">
+          <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+           <span class="store-icon-chegg">
+           </span>
+          </a>
+         </td>
+         <td class="pt-store">
+          <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+           Chegg
+          </a>
+          <div class="condition">
+           52 Day Rental
+           <br/>
+           (Due Date 12/22/2023)
+          </div>
+         </td>
+         <td class="pt-condition">
+          52 Day Rental
+          <br/>
+          (Due Date 12/22/2023)
+         </td>
+         <td class="pt-coupon stopProp">
+         </td>
+         <td class="pt-age">
+          <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+           <span class="price">
+            $11.99
+           </span>
+          </a>
+          <br/>
+          <span class="age">
+           as of 6 minutes ago
+          </span>
+         </td>
+         <td class="pt-shipping">
+          $4.99
+         </td>
+         <td class="pt-total">
+          <div class="g30">
+           <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+            <span class="price">
+             $16.98
+            </span>
+           </a>
+          </div>
+          <div class="g66">
+           <span class="pt-percent">
+            96% off
+           </span>
+           <a aria-label="Find this price at Chegg" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+            <span class="title">
+             $16.98
+            </span>
+            <span class="sup-title">
+             Rent Now
+            </span>
+            <span class="sub-title">
+             click here!
+            </span>
+           </a>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table class="price-table">
+       <tr class="gold">
+        <th colspan="2">
+         Store
+        </th>
+        <th class="pt-condition">
+         Condition
+        </th>
+        <th class="pt-age">
+         Payment Type
+        </th>
+        <th class="pt-total">
+         Offer
+        </th>
+       </tr>
+       <tr class="pt-odd sell">
+        <td class="pt-icon">
+         <a aria-label="Find this price at SellBackBooks" class="prevDef sellbackbooks_sell" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+          <span class="store-icon-sellbackbooks">
+          </span>
+         </a>
+        </td>
+        <td class="pt-store">
+         <a aria-label="Find this price at SellBackBooks" class="prevDef sellbackbooks_sell" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+          SellBackBooks
+         </a>
+         <div class="condition">
+          Sell Back
+         </div>
+        </td>
+        <td class="pt-condition">
+         Sell Back
+        </td>
+        <td class="pt-age">
+         Check
+        </td>
+        <td class="pt-total">
+         <div class="g30">
+          <a aria-label="Find this price at SellBackBooks" class="prevDef sellbackbooks_sell" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+           <span class="sellPrice">
+            $5.00
+           </span>
+          </a>
+         </div>
+         <div class="g66">
+          <a aria-label="Find this price at SellBackBooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+           <span class="title">
+            $5.00
+           </span>
+           <span class="sup-title">
+            Sell Now
+           </span>
+           <span class="sub-title">
+            click here!
+           </span>
+          </a>
+         </div>
+        </td>
+       </tr>
+      </table>
+      <input checked="checked" class="checkbox-hack" id="accord_all" name="filterTab" type="radio"/>
+      <input class="checkbox-hack" id="accord_a" name="filterTab" type="radio"/>
+      <input class="checkbox-hack" id="accord_b" name="filterTab" type="radio"/>
+      <input class="checkbox-hack" id="accord_rent" name="filterTab" type="radio"/>
+      <input class="checkbox-hack" id="accord_f" name="filterTab" type="radio"/>
+      <input class="checkbox-hack" id="accord_g" name="filterTab" type="radio"/>
+      <label class="checkbox-hack tab" for="accord_all" onclick="">
+       All
+      </label>
+      <label class="checkbox-hack tab" for="accord_a" onclick="">
+       Used
+      </label>
+      <label class="checkbox-hack tab" for="accord_b" onclick="">
+       New
+      </label>
+      <label class="checkbox-hack tab" for="accord_rent" onclick="">
+       Rent
+      </label>
+      <label class="checkbox-hack tab" for="accord_f" onclick="">
+       eBook
+      </label>
+      <label class="checkbox-hack tab" for="accord_g" onclick="">
+       Sell
+       <span>
+        Back
+       </span>
+      </label>
+      <div class="box-shadow" id="prices">
+       <ul class="accord">
+        <li>
+         <a id="used">
+         </a>
+         <table align="center" border="1" cellpadding="0" cellspacing="0" class="a price-table">
+          <thead>
+           <tr>
+            <th class="text-left price" colspan="7">
+             <h3>
+              <label class="checkbox-hack" for="accord_a" onclick="">
+               Buy it used
+               <span class="headText">
+                for as low as
+               </span>
+               $9.01
+              </label>
+             </h3>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr class="gold">
+            <th colspan="2">
+             Store
+            </th>
+            <th class="pt-condition">
+             Condition
+            </th>
+            <th class="pt-coupon">
+             Coupons &amp; Deals
+            </th>
+            <th class="pt-age">
+             Price
+            </th>
+            <th class="pt-shipping">
+             Shipping
+            </th>
+            <th class="pt-total">
+             Total
+            </th>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="store-icon-abebooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              Abebooks
+              <br/>
+              (Marketplace)
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="price">
+               $5.26
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $3.75
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="price">
+                $9.01
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               98% off
+              </span>
+              <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="title">
+                $9.01
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+              <span class="store-icon-secondsale">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+              SecondSale
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+              <span class="price">
+               $9.42
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $2.99
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+               <span class="price">
+                $12.41
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               97% off
+              </span>
+              <a aria-label="Find this price at SecondSale" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+               <span class="title">
+                $12.41
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="store-icon-chegg">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              Chegg
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="price">
+               $17.99
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $4.99
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="price">
+                $22.98
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               94% off
+              </span>
+              <a aria-label="Find this price at Chegg" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="title">
+                $22.98
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+              <span class="store-icon-textbooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+              Textbooks.com
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+             <span>
+              <label class="checkbox-hack" for="textbooks_used" onclick="">
+               $
+              </label>
+             </span>
+             <input class="checkbox-hack" id="textbooks_used" name="textbooks_used" type="checkbox"/>
+             <div class="gui-dialog">
+              <h4 class="gui-dialog-head">
+               Textbooks.com coupon(s)
+               <label class="checkbox-hack close icon-cancel" for="textbooks_used" onclick="">
+               </label>
+              </h4>
+              <p>
+               <em>
+                Details:
+               </em>
+               Get FREE shipping with a $25+ order
+               <br/>
+               <em>
+                Restrictions:
+               </em>
+               Must spend $25+
+               <br/>
+               <em>
+                Coupon Code:
+               </em>
+               <span class="couponcode">
+                no code needed
+               </span>
+               <br/>
+              </p>
+             </div>
+             <label class="checkbox-hack gui-overlay" for="textbooks_used" onclick="">
+             </label>
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+              <span class="price">
+               $67.71
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             <em>
+              FREE
+             </em>
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+               <span class="price">
+                $67.71
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               78% off
+              </span>
+              <a aria-label="Find this price at Textbooks.com" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+               <span class="title">
+                $67.71
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="store-icon-efollett">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              eFollett
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="price">
+               $236.50
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 36 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             <em>
+              FREE
+             </em>
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="price">
+                $236.50
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               22% off
+              </span>
+              <a aria-label="Find this price at eFollett" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="title">
+                $236.50
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </li>
+        <li>
+         <a id="new">
+         </a>
+         <table align="center" border="1" cellpadding="0" cellspacing="0" class="b price-table">
+          <thead>
+           <tr>
+            <th class="text-left price" colspan="7">
+             <h3>
+              <label class="checkbox-hack" for="accord_b" onclick="">
+               Buy it new
+               <span class="headText">
+                for as low as
+               </span>
+               $72.38
+              </label>
+             </h3>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr class="gold">
+            <th colspan="2">
+             Store
+            </th>
+            <th class="pt-condition">
+             Condition
+            </th>
+            <th class="pt-coupon">
+             Coupons &amp; Deals
+            </th>
+            <th class="pt-age">
+             Price
+            </th>
+            <th class="pt-shipping">
+             Shipping
+            </th>
+            <th class="pt-total">
+             Total
+            </th>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="store-icon-abebooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              Abebooks
+              <br/>
+              (Marketplace)
+             </a>
+             <div class="condition">
+              New
+             </div>
+            </td>
+            <td class="pt-condition">
+             New
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="price">
+               $70.38
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $2.00
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="price">
+                $72.38
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               77% off
+              </span>
+              <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="title">
+                $72.38
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </li>
+        <li>
+         <a id="semester">
+         </a>
+         <table align="center" border="1" cellpadding="0" cellspacing="0" class="c price-table">
+          <thead>
+           <tr>
+            <th class="text-left price" colspan="7">
+             <h3>
+              <label class="checkbox-hack" for="accord_c" onclick="">
+               Semester Rental
+               <span class="headText">
+                for as low as
+               </span>
+               $126.10
+              </label>
+             </h3>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr class="gold">
+            <th colspan="2">
+             Store
+            </th>
+            <th class="pt-condition">
+             Condition
+            </th>
+            <th class="pt-coupon">
+             Coupons &amp; Deals
+            </th>
+            <th class="pt-age">
+             Price
+            </th>
+            <th class="pt-shipping">
+             Shipping
+            </th>
+            <th class="pt-total">
+             Total
+            </th>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="store-icon-efollett">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              eFollett
+             </a>
+             <div class="condition">
+              Semester Rental
+             </div>
+            </td>
+            <td class="pt-condition">
+             Semester Rental
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="price">
+               $126.10
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 36 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             <em>
+              FREE
+             </em>
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="price">
+                $126.10
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               59% off
+              </span>
+              <a aria-label="Find this price at eFollett" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="title">
+                $126.10
+               </span>
+               <span class="sup-title">
+                Rent Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </li>
+        <li>
+        </li>
+        <li>
+         <a id="session">
+         </a>
+         <table align="center" border="1" cellpadding="0" cellspacing="0" class="e price-table">
+          <thead>
+           <tr>
+            <th class="text-left price" colspan="7">
+             <h3>
+              <label class="checkbox-hack" for="accord_e" onclick="">
+               55 Day Rental
+               <span class="headText">
+                for as low as
+               </span>
+               $16.98
+              </label>
+             </h3>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr class="gold">
+            <th colspan="2">
+             Store
+            </th>
+            <th class="pt-condition">
+             Condition
+            </th>
+            <th class="pt-coupon">
+             Coupons &amp; Deals
+            </th>
+            <th class="pt-age">
+             Price
+            </th>
+            <th class="pt-shipping">
+             Shipping
+            </th>
+            <th class="pt-total">
+             Total
+            </th>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="store-icon-chegg">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              Chegg
+             </a>
+             <div class="condition">
+              52 Day Rental
+              <br/>
+              (Due Date 12/22/2023)
+             </div>
+            </td>
+            <td class="pt-condition">
+             52 Day Rental
+             <br/>
+             (Due Date 12/22/2023)
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="price">
+               $11.99
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $4.99
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="price">
+                $16.98
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               96% off
+              </span>
+              <a aria-label="Find this price at Chegg" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="title">
+                $16.98
+               </span>
+               <span class="sup-title">
+                Rent Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </li>
+        <li>
+        </li>
+        <li>
+         <a id="sale">
+         </a>
+         <table align="center" border="1" cellpadding="0" cellspacing="0" class="g price-table sell">
+          <thead>
+           <tr>
+            <th class="text-left sell" colspan="4">
+             <h3>
+              <label class="checkbox-hack" for="accord_g" onclick="">
+               Sell yours
+               <span class="headText">
+                for as much as
+               </span>
+               $5.00
+              </label>
+             </h3>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr class="gold">
+            <th colspan="2">
+             Store
+            </th>
+            <th class="pt-condition">
+             Payment Type
+            </th>
+            <th class="pt-total">
+             Offer
+            </th>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at eCampus" class="prevDef ecampus_sell" href="https://www.cheapesttextbooks.com/ecampus/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at eCampus">
+              <span class="store-icon-ecampus">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at eCampus" class="prevDef ecampus_sell" href="https://www.cheapesttextbooks.com/ecampus/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at eCampus">
+              eCampus
+             </a>
+             <div class="condition">
+              Check
+             </div>
+            </td>
+            <td class="pt-condition">
+             Check
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at eCampus" class="prevDef ecampus_sell" href="https://www.cheapesttextbooks.com/ecampus/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at eCampus">
+               <span class="sellPrice">
+                $5.00
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <a aria-label="Find this price at eCampus" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/ecampus/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at eCampus">
+               <span class="title">
+                $5.00
+               </span>
+               <span class="sup-title">
+                Sell Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at SellBackBooks" class="prevDef sellbackbooks_sell" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+              <span class="store-icon-sellbackbooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at SellBackBooks" class="prevDef sellbackbooks_sell" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+              SellBackBooks
+             </a>
+             <div class="condition">
+              Check
+             </div>
+            </td>
+            <td class="pt-condition">
+             Check
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at SellBackBooks" class="prevDef sellbackbooks_sell" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+               <span class="sellPrice">
+                $5.00
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <a aria-label="Find this price at SellBackBooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/sellbackbooks/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackBooks">
+               <span class="title">
+                $5.00
+               </span>
+               <span class="sup-title">
+                Sell Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at SellBackYourBook" class="prevDef sellbackyourbook_sell" href="https://www.cheapesttextbooks.com/sellbackyourbook/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackYourBook">
+              <span class="store-icon-sellbackyourbook">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at SellBackYourBook" class="prevDef sellbackyourbook_sell" href="https://www.cheapesttextbooks.com/sellbackyourbook/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackYourBook">
+              SellBackYourBook
+             </a>
+             <div class="condition">
+              Check
+             </div>
+            </td>
+            <td class="pt-condition">
+             Check
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at SellBackYourBook" class="prevDef sellbackyourbook_sell" href="https://www.cheapesttextbooks.com/sellbackyourbook/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackYourBook">
+               <span class="sellPrice">
+                $0.60
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <a aria-label="Find this price at SellBackYourBook" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/sellbackyourbook/redirect/sell/9780077221430.html?percent_savings=" rel="nofollow noopener" target="_blank" title="Find this price at SellBackYourBook">
+               <span class="title">
+                $0.60
+               </span>
+               <span class="sup-title">
+                Sell Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </li>
+        <li>
+         <a id="all">
+         </a>
+         <table align="center" border="1" cellpadding="0" cellspacing="0" class="h price-table">
+          <thead>
+           <tr>
+            <th class="text-left price" colspan="7">
+             <h3>
+              <label class="checkbox-hack" for="accord_h" onclick="">
+               Best
+               <span class="des">
+                Buying and Renting
+               </span>
+               Options -
+               <span class="headText">
+                Total includes shipping
+               </span>
+              </label>
+             </h3>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr class="gold">
+            <th colspan="2">
+             Store
+            </th>
+            <th class="pt-condition">
+             Condition
+            </th>
+            <th class="pt-coupon">
+             Coupons &amp; Deals
+            </th>
+            <th class="pt-age">
+             Price
+            </th>
+            <th class="pt-shipping">
+             Shipping
+            </th>
+            <th class="pt-total">
+             Total
+            </th>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="store-icon-abebooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              Abebooks
+              <br/>
+              (Marketplace)
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="price">
+               $5.26
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $3.75
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Abebooks" class="prevDef abebooks_usedmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="price">
+                $9.01
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               98% off
+              </span>
+              <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/usedmkt/9780077221430.html?PID=31676837117&amp;percent_savings=98" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="title">
+                $9.01
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+              <span class="store-icon-secondsale">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+              SecondSale
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+              <span class="price">
+               $9.42
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $2.99
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at SecondSale" class="prevDef secondsale_used" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+               <span class="price">
+                $12.41
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               97% off
+              </span>
+              <a aria-label="Find this price at SecondSale" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/secondsale/redirect/used/9780077221430.html?ref_url=urllink=www.secondsale.com%2Fcart%3Ftype%3Dautoadd%26pa%3D59945270&amp;percent_savings=97" rel="nofollow noopener" target="_blank" title="Find this price at SecondSale">
+               <span class="title">
+                $12.41
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="store-icon-chegg">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              Chegg
+             </a>
+             <div class="condition">
+              52 Day Rental
+              <br/>
+              (Due Date 12/22/2023)
+             </div>
+            </td>
+            <td class="pt-condition">
+             52 Day Rental
+             <br/>
+             (Due Date 12/22/2023)
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="price">
+               $11.99
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $4.99
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Chegg" class="prevDef chegg_rentalsession" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="price">
+                $16.98
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               96% off
+              </span>
+              <a aria-label="Find this price at Chegg" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/chegg/redirect/rentalsession/9780077221430.html?PID=LBP-2498517|e3768f63-008a-4eaf-9bc8-16ce6611aa3a|1&amp;percent_savings=96" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="title">
+                $16.98
+               </span>
+               <span class="sup-title">
+                Rent Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="store-icon-chegg">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              Chegg
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+              <span class="price">
+               $17.99
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $4.99
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Chegg" class="prevDef chegg_used" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="price">
+                $22.98
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               94% off
+              </span>
+              <a aria-label="Find this price at Chegg" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/chegg/redirect/used/9780077221430.html?PID=LBP-2498517|4a6586b3-381d-49ec-a432-887279c1dd13|1&amp;percent_savings=94" rel="nofollow noopener" target="_blank" title="Find this price at Chegg">
+               <span class="title">
+                $22.98
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+              <span class="store-icon-textbooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+              Textbooks.com
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+             <span>
+              <label class="checkbox-hack" for="all_textbooks_used" onclick="">
+               $
+              </label>
+             </span>
+             <input class="checkbox-hack" id="all_textbooks_used" name="all_textbooks_used" type="checkbox"/>
+             <div class="gui-dialog">
+              <h4 class="gui-dialog-head">
+               Textbooks.com coupon(s)
+               <label class="checkbox-hack close icon-cancel" for="all_textbooks_used" onclick="">
+               </label>
+              </h4>
+              <p>
+               <em>
+                Details:
+               </em>
+               Get FREE shipping with a $25+ order
+               <br/>
+               <em>
+                Restrictions:
+               </em>
+               Must spend $25+
+               <br/>
+               <em>
+                Coupon Code:
+               </em>
+               <span class="couponcode">
+                no code needed
+               </span>
+               <br/>
+              </p>
+             </div>
+             <label class="checkbox-hack gui-overlay" for="all_textbooks_used" onclick="">
+             </label>
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+              <span class="price">
+               $67.71
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             <em>
+              FREE
+             </em>
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Textbooks.com" class="prevDef textbooks_used" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+               <span class="price">
+                $67.71
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               78% off
+              </span>
+              <a aria-label="Find this price at Textbooks.com" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/textbooks/redirect/used/9780077221430.html?ref_url=//textbooks.pxf.io/c/60236/369696/5360?u=https%3A%2F%2Fwww.textbooks.com%2FCart.php%3FACTION%3Dsingleadd%26FVBKN1%3D851397%26FVORDER1%3DU_851397&amp;percent_savings=78" rel="nofollow noopener" target="_blank" title="Find this price at Textbooks.com">
+               <span class="title">
+                $67.71
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="store-icon-abebooks">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              Abebooks
+              <br/>
+              (Marketplace)
+             </a>
+             <div class="condition">
+              New
+             </div>
+            </td>
+            <td class="pt-condition">
+             New
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+              <span class="price">
+               $70.38
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 6 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             $2.00
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at Abebooks" class="prevDef abebooks_newmkt" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="price">
+                $72.38
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               77% off
+              </span>
+              <a aria-label="Find this price at Abebooks" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/abebooks/redirect/newmkt/9780077221430.html?PID=31667816987&amp;percent_savings=77" rel="nofollow noopener" target="_blank" title="Find this price at Abebooks">
+               <span class="title">
+                $72.38
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-even">
+            <td class="pt-icon">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="store-icon-efollett">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              eFollett
+             </a>
+             <div class="condition">
+              Semester Rental
+             </div>
+            </td>
+            <td class="pt-condition">
+             Semester Rental
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="price">
+               $126.10
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 36 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             <em>
+              FREE
+             </em>
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at eFollett" class="prevDef efollett_rentalsemester" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="price">
+                $126.10
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               59% off
+              </span>
+              <a aria-label="Find this price at eFollett" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/efollett/redirect/rentalsemester/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=59" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="title">
+                $126.10
+               </span>
+               <span class="sup-title">
+                Rent Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+           <tr class="pt-odd">
+            <td class="pt-icon">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="store-icon-efollett">
+              </span>
+             </a>
+            </td>
+            <td class="pt-store">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              eFollett
+             </a>
+             <div class="condition">
+              Used
+             </div>
+            </td>
+            <td class="pt-condition">
+             Used
+            </td>
+            <td class="pt-coupon stopProp">
+            </td>
+            <td class="pt-age">
+             <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+              <span class="price">
+               $236.50
+              </span>
+             </a>
+             <br/>
+             <span class="age">
+              as of 36 minutes ago
+             </span>
+            </td>
+            <td class="pt-shipping">
+             <em>
+              FREE
+             </em>
+            </td>
+            <td class="pt-total">
+             <div class="g30">
+              <a aria-label="Find this price at eFollett" class="prevDef efollett_used" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="price">
+                $236.50
+               </span>
+              </a>
+             </div>
+             <div class="g66">
+              <span class="pt-percent">
+               22% off
+              </span>
+              <a aria-label="Find this price at eFollett" class="multi-line-button stopProp" href="https://www.cheapesttextbooks.com/efollett/redirect/used/9780077221430.html?ref_url=https%3A%2F%2Fwww.bkstr.com%2Fdaytonastatedaytonastore%2Fproduct%2Ffund-of-digital-logic-with-vhdl-design--w-cd--138628-1&amp;percent_savings=22" rel="nofollow noopener" target="_blank" title="Find this price at eFollett">
+               <span class="title">
+                $236.50
+               </span>
+               <span class="sup-title">
+                Buy Now
+               </span>
+               <span class="sub-title">
+                click here!
+               </span>
+              </a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </li>
+       </ul>
+       <div class="center h3 NA d f">
+        This book is not available for: 85 Day Rental, eBook
+       </div>
+      </div>
+     </div>
+    </meta>
+   </div>
+   <div id="foot">
+    <div class="toe">
+     <ul class="soc">
+      <li class="first">
+       <a aria-label="Check out Cheapest Textbooks on Instagram." class="gui-button animate border rounded inv instagram" href="https://www.instagram.com/cheapesttextbooks/" rel="noopener" target="_blank" title="Check out Cheapest Textbooks on Instagram.">
+        <i aria-hidden="true" class="icon-instagram">
+        </i>
+       </a>
+      </li>
+      <li class="">
+       <a aria-label="Check out Cheapest Textbooks on Instagram." class="gui-button animate border rounded inv twitter" href="https://www.twitter.com/CheapTextbooks" rel="noopener" target="_blank" title="Check out Cheapest Textbooks on Instagram.">
+        <i aria-hidden="true" class="icon-twitter-bird">
+        </i>
+       </a>
+      </li>
+     </ul>
+     <ul class="soc last">
+      <li class="first">
+       <a aria-label="Check out Cheapest Textbooks on YouTube." class="gui-button animate border rounded inv youtube" href="https://www.youtube.com/thecheapesttextbooks" rel="noopener" target="_blank" title="Check out Cheapest Textbooks on YouTube.">
+        <i aria-hidden="true" class="icon-youtube-play">
+        </i>
+       </a>
+      </li>
+      <li class="">
+       <a aria-label="Check out Cheapest Textbooks on Facebook." class="gui-button animate border rounded inv facebook" href="https://www.facebook.com/pages/CheapestTextbookscom/135487516342" rel="noopener" target="_blank" title="Check out Cheapest Textbooks on Facebook.">
+        <i aria-hidden="true" class="icon-facebook">
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="toe c">
+     <ul class="links">
+      <li class="first">
+       <a href="https://www.cheapesttextbooks.com/collegeknowledge/about-us" title="About Us - CheapestTextbooks.com">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/banners.html" title="Link to Us - CheapestTextbooks.com">
+        Link to our site
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/suggestions.html" rel="nofollow" title="Tell us how can we improve helping you find cheap textbooks at CheapestTextbooks.com!">
+        Suggestions
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/sitemap.html" title="Need help getting around CheapestTextbooks.com?">
+        Site Map
+       </a>
+      </li>
+      <li class="break">
+       <a href="https://www.cheapesttextbooks.com/contact.html" rel="nofollow" title="Questions or Comments? Send us a message to let us know!">
+        Contact Us
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/privacy.html" rel="nofollow" title="Privacy Statement for CheapestTextbooks.com">
+        Privacy Statement
+       </a>
+      </li>
+      <li>
+       <a href="https://www.cheapesttextbooks.com/disclaimer.html" rel="nofollow" title="Please read and understand our disclaimer.">
+        Disclaimer
+       </a>
+      </li>
+     </ul>
+     <p id="view-responsive">
+      <a>
+       <span>
+       </span>
+      </a>
+     </p>
+     <p>
+      ©
+      <a href="https://www.cheapesttextbooks.com/" title="Cheap Textbooks">
+       Cheapest
+       <span class="headText">
+        Textbooks
+       </span>
+       .com
+      </a>
+      2001-2023. All rights reserved.
+     </p>
+    </div>
+    <div class="toe">
+    </div>
+   </div>
+  </div>
+  <script>
+   (function (w, d, s, l) { var t, f = d.getElementsByTagName(s)[0], n = l.length, i = 0, go = function () { for (i = 0; i < n; i = i + 1) { t = d.createElement(s); t.async = "async"; t.src = l[i]; f.parentNode.insertBefore(t, f); } }; if (w.attachEvent) { w.attachEvent('onload', go); } else { w.addEventListener('load', go, false); } }(window, document, 'script', [ 'https://c932109.ssl.cf2.rackcdn.com/JS/8ba17c0.js' ]));
+  </script>
+ </body>
+</html>
