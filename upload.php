@@ -49,7 +49,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-display-topright">Logout</a>
 </div>
 
-<script>
+<!--<script>
   fetch("url.txt")
   .then((res) => res.text())
   .then((text) => {
@@ -60,19 +60,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     //window.onload = function(){
         // window.open(client.responseText, "_blank"); // will open new tab on window.onload
     //}
-</script>
+</script>-->
 
 <!-- Header 
 <header class="w3-container w3-center" style="background-color:rgb(69, 0, 132);color:white;padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">Find your Textbook!</h1>
 </header>-->
 
-<!-- First Grid -->
+<!-- First Grid 
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <p><?=$output;?></p>
+    <p><//?=$output;?></p>
   </div>
-</div>
+</div>-->
 
 </body>
 </html>
