@@ -1,3 +1,8 @@
+<?php
+echo shell_exec("python calendarEvent.py");
+header("Location: http://localhost/web/calendar.html");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,18 +33,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Header -->
 <header class="w3-container w3-center" style="background-color:rgb(69, 0, 132);color:white;padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Upload Your Syllabus!</h1>
+  <h1 class="w3-margin w3-jumbo">Calender</h1>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <h2>Upload your syllabus (Be Sure that the syllabus file is named syllabus.docx):</h2>
-    <h3>This will take some time. Please be patient.</h3>
-    <form action="uploadSy.php" method="POST" enctype="multipart/form-data">
-      <input type="file" name="fileToUpload" id="fileToUpload" accept=".doc,.docx">
-      <input type="submit" value="Upload File" name="submit">
-    </form>
+    <div class="w3-twothird">
+      
+    </div>
   </div>
 </div>
 

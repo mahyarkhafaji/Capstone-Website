@@ -162,10 +162,12 @@ if(isset($_POST["save"])){
       echo "Error: " . $sql . "" . mysqli_error($conn);
     }
 
-    $python_script = "D:\XAMPP\htdocs\Web\generateSyllabus.py";
-    $command = escapeshellcmd('python $python_script');
-    $output = shell_exec($command);
-    echo $output;
+    //$python_script = "D:\XAMPP\htdocs\Web\generateSyllabus.py";
+    //$command = escapeshellcmd('python $python_script');
+    //$output = shell_exec($command);
+    //echo $output;
+
+    echo shell_exec("python generateSyllabus.py");
     
     mysqli_close($conn);
 
