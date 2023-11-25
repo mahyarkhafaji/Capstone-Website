@@ -157,18 +157,38 @@ if(isset($_POST["save"])){
     if ($result) {
       print_r($my_array);
       $json = json_encode($my_array);
-      file_put_contents('test.txt', $json);
+      file_put_contents('qa.txt', $json);
     } else {
       echo "Error: " . $sql . "" . mysqli_error($conn);
     }
 
-    //$python_script = "D:\XAMPP\htdocs\Web\generateSyllabus.py";
-    //$command = escapeshellcmd('python $python_script');
-    //$output = shell_exec($command);
-    //echo $output;
-
     echo shell_exec("python generateSyllabus.py");
-    
+
+    $filePath = 'syllabus-generated.docx';
+    $fileName = basename($filePath);
+
+// Check if the file exists
+    if (file_exists($filePath)) {
+    // Set headers to download the file
+      header('Content-Description: File Transfer');
+      header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      header('Content-Disposition: attachment; filename="' . $fileName . '"');
+      header('Expires: 0');
+      header('Cache-Control: must-revalidate');
+      header('Pragma: public');
+      header('Content-Length: ' . filesize($filePath));
+
+    // Clear the output buffer
+      ob_clean();
+      flush();
+
+    // Read the file and output its contents
+      readfile($filePath);
+      exit;
+    } else {
+      echo "Error: File not found.";
+  }
+
     mysqli_close($conn);
 
 }
