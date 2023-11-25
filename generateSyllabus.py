@@ -9,7 +9,7 @@ document = Document()
 section = document.sections[0]
 header = section.header
 
-f = open( "q&a.txt", "r")
+f = open( "qa.txt", "r")
 g = f.read()
 answers = [s.replace("[", "").replace("]", "") for s in g.split('"')]
 
@@ -43,10 +43,16 @@ def generate():
 
     if (answers[14].upper() == 'YES'):
         records.append(('Phone: ' + answers[9]))
+    else:
+        records.append('Phone: N/A')
     if (answers[22].upper() == 'YES'):
         records.append(('Discussion seminar time: ' + answers[49]), ('Discussion Seminar location: ' + answers[51]))
+    else:
+        records.append('Discussion seminar: N/A')
     if (answers[35].upper() == 'YES'):
         records.append(('Virtual office hours(Zoom)\nMeeting ID: '+ answers[37] + '\nPasscode: ' + answers[39]))
+    else:
+        records.append('Virtual office (Zoom): N/A')
 
     num_rows = (len(records) + 1) // 2
     table = document.add_table(rows=num_rows, cols=2, style = "Table Grid")
