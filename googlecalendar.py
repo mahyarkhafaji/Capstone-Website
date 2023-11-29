@@ -15,9 +15,14 @@ import time
 from googleapiclient.http import MediaFileUpload
 
 def format_date(date):
-    x = date.split('/')
-    return datetime(2024, int(x[0]), int(x[1]), 13, 0, 0)
+    date_obj = datetime.strptime(date, '%Y-%m-%d')
 
+    # Return a new datetime object with the specific time set (e.g., 13:00)
+    return datetime(date_obj.year, date_obj.month, date_obj.day, 13, 0, 0)
+
+#def get_week_number(date_str):
+#    date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+#    return date_obj.isocalendar()[1]  # returns week number
 
 # Define scopes
 SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/drive"]
@@ -45,19 +50,19 @@ def main():
       token.write(creds.to_json())
 
   try:
-
-#Authorize the API
+    #Authorize the API
     file_name = 'D:/XAMPP/htdocs/Web/client_service.json'
-    service = build("calendar", "v3", credentials=creds)
+    service2 = build("calendar", "v3", credentials=creds)
+    service = build("drive", "v3", credentials=creds)
     creds = ServiceAccountCredentials.from_json_keyfile_name(file_name, SCOPES)
     client = gspread.authorize(creds)
 
 #Fetch the sheet
-    worksheet = client.open('IT212_Schedule').sheet1
+    worksheet = client.open('schedule').sheet1
     data = worksheet.get_all_values()
     # Parse through worksheet to manipulate cells
     for row in data[1:]:  # Skip header row
-        date, event_description, homework, lab = row[0], row[4], row[7], row[8]
+        date, event_description, homework, lab, discussion, quiz, exam = row[0], row[1], row[2], row[3], row[4], row[5], row[6]
         if date:
             start_time = format_date(date)
             end_time = start_time + timedelta(hours=2)
@@ -68,48 +73,79 @@ def main():
         if event_description:
             events.append(create_event('Class', 'EnGeo 2209', event_description, start_time, end_time, timezone))
         if homework:
-            events.append(create_event(f'HW {homework} due', 'EnGeo 2209', 'Homework', start_time, end_time, timezone))
+            events.append(create_event(f'HW {homework} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
         if lab:
-            events.append(create_event(f'Lab {lab} due', 'EnGeo 2209', event_description, start_time, end_time, timezone))
-            
+            events.append(create_event(f'Lab {lab} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
+        if discussion:
+            events.append(create_event(f'Discussion {discussion} due', 'EnGeo 2209', event_description, start_time, end_time, timezone))
+        if quiz:
+            events.append(create_event(f'Quiz {quiz} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
+        if exam:
+            events.append(create_event(f'Exam {exam} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
         for event in events:
-            service.events().insert(calendarId='dummytest12313@gmail.com', body=event).execute()
+            service2.events().insert(calendarId='dummytest12313@gmail.com', body=event).execute()
             time.sleep(1)  # Throttle requests to avoid quota limits
-    
-    
+
     #Weekly Folder
-    weekCount = 1  # Keeps track of weeks
-    currentWeek = 'Week 1'
-    weekData = []  # Stores data for the current week
-    service = build("drive", "v3", credentials=creds)
+    #weekCount = 1  # Keeps track of weeks
+    #currentWeek = 'Week 1'
+    start_of_week1_str = data[1][0]  # data[1] is the first row, and data[1][0] is the date in that row
+    start_of_week1 = datetime.strptime(start_of_week1_str, '%Y-%m-%d')
+    weekData = {}  # Stores data for the current week
 
     for row in data[1:]:  # Skip the header row
-        if (weekCount - 1) * 2 <= data.index(row) < weekCount * 2:
-            weekData.append(row)
-        else:
-            # Process and upload the data for the completed week
-            process_and_upload_week_data(service, currentWeek, weekData)
+        #date, homework, lab = row[0], row[2], row[3]
+        date = row[0]
+        week_num = get_relative_week_number(start_of_week1, date)
+        if week_num not in weekData:
+            weekData[week_num] = []
+        weekData[week_num].append(row)
 
-            # Prepare for the next week
-            weekCount += 1
-            currentWeek = 'Week ' + str(weekCount)
-            weekData = [row]
-            # Process and upload the last week's data
+        # Process and upload the data for each week
+    for week_num, rows in weekData.items():
+        currentWeek = f"Week {week_num}"
+        process_and_upload_week_data(service, currentWeek, rows)
+
+    # Additional processing for each row
+        for row in rows:
+            homework, lab = row[2], row[3]
+            if homework.strip():  # Check if homework is not empty
+                create_and_upload_file(service, homework, week_num, "homework_solution_week", currentWeek)
+            if lab.strip():  # Check if lab is not empty
+                create_and_upload_file(service, lab, week_num, "lab_template_week", currentWeek)
+    weekData.clear()
     if weekData:
         process_and_upload_week_data(service, currentWeek, weekData)
-
-
   except HttpError as error:
     print(f"An error occurred: {error}")
+
+#start_of_week1 = datetime(2024, 1, 23)
+
+def get_relative_week_number(start_date, current_date_str):
+    current_date = datetime.strptime(current_date_str, '%Y-%m-%d')
+    delta = current_date - start_date
+    # Calculate the relative week number, starting from 1
+    return delta.days // 7 + 1
+
+def create_and_upload_file(service, content, weekCount, file_prefix, currentWeek):
+    """Create and upload a file for homework or lab."""
+    file_name = f"{file_prefix}_{weekCount}.txt"
+    try:
+        with open(file_name, 'w') as file:
+            file.write(content)  # Optionally write content to the file
+
+        print(f"File created: {file_name}")
+        upload_file_to_drive(service, get_folder_id(currentWeek, service), file_name)
+    except Exception as e:
+        print(f"Error creating file: {e}")
 
 
 def process_and_upload_week_data(service, weekName, weekData):
     # Define your labels here, matching the structure of your Excel data
-    labels = ["Date", "Lecture Number", "Lab Number", "", "Topic", "Reading", "HW Number", "HW Number Due", "Lab Number Due"]
+    labels = ["Date", "Topic", "Assignment", "Lab Due", "Discussion", "Quiz", "Exam"]
 
     # Create a folder for the week
     weekFolderId = create_folder(service, weekName, get_folder_id("IT212-New", service))
-    
     # Create a text file with the week's data
     weekFileName = f"{weekName}_info.txt"
     with open(weekFileName, 'w') as file:
