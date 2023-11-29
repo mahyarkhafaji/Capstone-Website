@@ -6,16 +6,14 @@ from urllib.error import HTTPError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.http import MediaFileUpload
 from google.auth.transport.requests import Request
-import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
 from googleapiclient.errors import HttpError
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 import numpy as np
 import backoff
 import time
+import pandas as pd
 
 # Define scopes
 SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/drive"]
@@ -46,18 +44,17 @@ def main():
 #Authorize the API
     file_name = 'D:/XAMPP/htdocs/Web/client_service.json'
     creds = ServiceAccountCredentials.from_json_keyfile_name(file_name, SCOPES)
-    #client = gspread.authorize(creds)
     service = build("drive", "v3", credentials=creds)
     # Replace FOLDER_ID with the ID of the folder you want to upload the file to
     folder_id = create_folder(service, "IT212-New") #get_folder_id("IT212", service)
     share_folder_with_email(service, folder_id, "dummytest12313@gmail.com", "writer")
 
 # Create a MediaFileUpload object for the downloaded file
-    media = MediaFileUpload('IT212Syllabus.docx')
+    media = MediaFileUpload('C:/Users/mahya/Downloads/syllabus-generated.docx')
 
 # Set the file metadata
     file_metadata = {
-        'name': 'IT212Syllabus.docx',
+        'name': 'syllabus-generated.docx',
         'parents': [folder_id]
     }
     file = service.files().create(
@@ -67,18 +64,47 @@ def main():
     ).execute()
 
     # Create a MediaFileUpload object for the downloaded file
-    media = MediaFileUpload('IT212_Schedule.xlsx')
+    #media = MediaFileUpload('C:/Users/mahya/Downloads/schedule.xlsx')
 
-# Set the file metadata
+    # Load the Excel file
+    df = pd.read_excel('C:/Users/mahya/Downloads/schedule.xlsx')
+
+    # Save as a CSV (temporary step)
+    df.to_csv('temp.csv', index=False)
+
+    # File metadata
     file_metadata = {
-        'name': 'IT212_Schedule.xlsx',
+        'name': 'schedule',
+        'mimeType': 'application/vnd.google-apps.spreadsheet',
         'parents': [folder_id]
     }
-    file = service.files().create(
-        body=file_metadata,
-        media_body=media,
-        fields='id'
-    ).execute()
+
+# Media content
+    media = MediaFileUpload('temp.csv', mimetype='text/csv', resumable=True)
+
+# Upload file
+    file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+
+# Set the file metadata
+    #file_metadata = {
+    #    'name': 'schedule.xlsx',
+    #    'parents': [folder_id]
+    #}
+    #file = service.files().create(
+    #    body=file_metadata,
+    #    media_body=media,
+    #    fields='id'
+    #).execute()
+    
+    #file_metadata = {
+    #    'name': 'schedule.xlsx',
+    #    'parents': [get_folder_id("IT212", service)]
+    #}
+    #file = service.files().create(
+    #    body=file_metadata,
+    #    media_body=media,
+    #    fields='id'
+    #).execute()
 
   except HttpError as error:
     print(f"An error occurred: {error}")

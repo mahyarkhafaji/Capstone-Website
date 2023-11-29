@@ -14,7 +14,7 @@ g = f.read()
 answers = [s.replace("[", "").replace("]", "") for s in g.split('"')]
 
 # Load schedule excel
-df = pd.read_excel('C:/Users/mahya/Desktop/Capstone/courseorganizer-main/Scripts/test.xlsx', sheet_name='Sheet1')
+df = pd.read_excel('C:/Users/mahya/Downloads/schedule.xlsx', sheet_name='sheet1')
 
 def generate():
 
@@ -27,28 +27,32 @@ def generate():
     title_format = title.paragraph_format
     title_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
-    title2 = document.add_paragraph(answers[2])
+    title2 = document.add_paragraph(answers[3])
     title2_format = title2.paragraph_format
     title2_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     title3 = document.add_paragraph(answers[13])
     title3_format = title3.paragraph_format
     title3_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-
+    
+    title4 = document.add_paragraph(answers[5])
+    title4_format = title4.paragraph_format
+    title4_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    #fix
     records = [
         ('Class Location: ' + answers[15]), ('E-mail: ' + answers[11]),
         ('Office location: ' + answers[21]), ('Office hours: ' + answers[19]),
     
     ]
 
-    if (answers[14].upper() == 'YES'):
+    if (answers[7].upper() == 'YES'):
         records.append(('Phone: ' + answers[9]))
     else:
         records.append('Phone: N/A')
-    if (answers[22].upper() == 'YES'):
-        records.append(('Discussion seminar time: ' + answers[49]), ('Discussion Seminar location: ' + answers[51]))
+    if (answers[55].upper() == 'YES'):
+        records.append(('Discussion seminar time: ' + answers[57] + '\nDiscussion Seminar location: ' + answers[59]))
     else:
-        records.append('Discussion seminar: N/A')
+        records.append(('Discussion seminar time: N/A' + '\nDiscussion Seminar location: '))
     if (answers[35].upper() == 'YES'):
         records.append(('Virtual office hours(Zoom)\nMeeting ID: '+ answers[37] + '\nPasscode: ' + answers[39]))
     else:
@@ -57,12 +61,8 @@ def generate():
     num_rows = (len(records) + 1) // 2
     table = document.add_table(rows=num_rows, cols=2, style = "Table Grid")
     header_row = table.rows[0].cells
-    header_row[0].text = 'Instructor: ' + answers[5]
     header_row[1].text = 'Class Time: ' + answers[17]
-#for x, y in records:
-#    row_cells = table.add_row().cells
-#    row_cells[0].text = x
-#    row_cells[1].text = y
+
 
     for i in range(len(records)):
         row_idx = (i + 1) // 2  # add 1 to account for header row
@@ -74,55 +74,55 @@ def generate():
 
     paragraph2 = document.add_paragraph('\n')
 
-    if (answers[77].upper() == 'YES'):
+    if (answers[85].upper() == 'YES'):
         run = paragraph2.add_run('Prerequisites')
         run.underline = True
         run.underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[79])
+        paragraph2.add_run('\n' + answers[87])
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nCourse Description').underline = WD_UNDERLINE.SINGLE
     paragraph2.add_run('\n' + answers[31])
 
-    if (answers[81].upper() == 'YES'):
+    if (answers[89].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nCourse Materials').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' 'Textbook: ' + answers[83])
-        paragraph2.add_run('\n' 'ISBN: ' + answers[85])
+        paragraph2.add_run('\n' 'Textbook: ' + answers[91])
+        paragraph2.add_run('\n' 'ISBN-13: ' + answers[93])
 
-    if (answers[87].upper() == 'YES'):
+    if (answers[95].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nLearning Objectives').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[89])
+        paragraph2.add_run('\n' + answers[97])
 
     if (answers[43].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nLab Policy').underline = WD_UNDERLINE.SINGLE
         paragraph2.add_run('\n' + answers[45])
 
-    if (answers[59].upper() == 'YES'):
+    if (answers[61].upper() == 'YES'):
         paragraph2.add_run('\n')
-        paragraph2.add_run('\nAssignments').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[61])
+        paragraph2.add_run('\nAssignments Policy').underline = WD_UNDERLINE.SINGLE
+        paragraph2.add_run('\n' + answers[63])
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nExpectations').underline = WD_UNDERLINE.SINGLE
-    paragraph2.add_run('\n' + answers[91])
+    paragraph2.add_run('\n' + answers[99])
 
-    if (answers[63].upper() == 'YES'):
+    if (answers[67].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nQuiz').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[65])
+        paragraph2.add_run('\n' + answers[69])
 
-    if (answers[69].upper() == 'YES'):
+    if (answers[73].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nExam').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[71])
+        paragraph2.add_run('\n' + answers[75])
 
-    if (answers[47].upper() == 'YES'):
+    if (answers[49].upper() == 'YES'): #check location
         paragraph2.add_run('\n')
         paragraph2.add_run('\nDiscussion Policy').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[49])
+        paragraph2.add_run('\n' + answers[51])
 
 
     paragraph2.add_run('\n')
@@ -131,7 +131,7 @@ def generate():
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nGrading').underline = WD_UNDERLINE.SINGLE
-    paragraph2.add_run('\n' + answers[95])
+    paragraph2.add_run('\n' + answers[103])
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nDisability Services').underline = WD_UNDERLINE.SINGLE
@@ -141,19 +141,19 @@ def generate():
     paragraph2.add_run('\nHonor Code').underline = WD_UNDERLINE.SINGLE
     paragraph2.add_run('\n' + answers[25])
 
-    if (answers[97].upper() == 'YES'):
+    if (answers[105].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nOnline Resources').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[99])
+        paragraph2.add_run('\n' + answers[107])
 
-    if (answers[101].upper() == 'YES'):
+    if (answers[109].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nExtra Credit').underline = WD_UNDERLINE.SINGLE
-        paragraph2.add_run('\n' + answers[103])
+        paragraph2.add_run('\n' + answers[111])
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nFinal Exam').underline = WD_UNDERLINE.SINGLE
-    paragraph2.add_run('\n' + answers[105])
+    paragraph2.add_run('\n' + answers[113])
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nInclement Weather').underline = WD_UNDERLINE.SINGLE
@@ -161,9 +161,9 @@ def generate():
 
     paragraph2.add_run('\n')
     paragraph2.add_run('\nWithdrawals').underline = WD_UNDERLINE.SINGLE
-    paragraph2.add_run('\n' + answers[107])
+    paragraph2.add_run('\n' + answers[115])
 
-    if (answers[27].upper() == 'YES'):
+    if (answers[83].upper() == 'YES'):
         paragraph2.add_run('\n')
         paragraph2.add_run('\nSyllabus Update').underline = WD_UNDERLINE.SINGLE
         paragraph2.add_run('\nThis syllabus can be updated at any point in time in the semester')
@@ -186,6 +186,7 @@ def generate():
         for i in range(len(df.columns)):
             row_cells[i].text = str(row[i])
 
-    document.save('syllabus-generated.docx')
+    #document.save('syllabus-generated.docx')
+    document.save('C:/Users/mahya/Downloads/syllabus-generated.docx')
 
 generate()
