@@ -14,15 +14,22 @@ import backoff
 import time
 from googleapiclient.http import MediaFileUpload
 
-def format_date(date):
+def format_date(date, start_hour=13, start_minute=0):
     date_obj = datetime.strptime(date, '%Y-%m-%d')
+    return datetime(date_obj.year, date_obj.month, date_obj.day, start_hour, start_minute, 0)
 
-    # Return a new datetime object with the specific time set (e.g., 13:00)
-    return datetime(date_obj.year, date_obj.month, date_obj.day, 13, 0, 0)
-
-#def get_week_number(date_str):
-#    date_obj = datetime.strptime(date_str, '%Y-%m-%d')
-#    return date_obj.isocalendar()[1]  # returns week number
+def get_next_wednesday(date_str):
+    date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+    # Calculate how many days to add to get to the next Wednesday
+    # (Python's datetime module treats Monday as 0, so Wednesday is 2)
+    days_until_wednesday = (2 - date_obj.weekday() + 7) % 7
+    if days_until_wednesday == 0:
+        # If it's already Wednesday, don't add any days
+        next_wednesday = date_obj
+    else:
+        # Otherwise, add the necessary number of days
+        next_wednesday = date_obj + timedelta(days=days_until_wednesday)
+    return next_wednesday
 
 # Define scopes
 SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/drive"]
@@ -61,27 +68,37 @@ def main():
     worksheet = client.open('schedule').sheet1
     data = worksheet.get_all_values()
     # Parse through worksheet to manipulate cells
+    office_hours_added = set()
     for row in data[1:]:  # Skip header row
         date, event_description, homework, lab, discussion, quiz, exam = row[0], row[1], row[2], row[3], row[4], row[5], row[6]
         if date:
             start_time = format_date(date)
             end_time = start_time + timedelta(hours=2)
             timezone = 'America/New_York'
+            current_date = datetime.strptime(date, '%Y-%m-%d')
+            week_number = current_date.isocalendar()[1]
 
         # Create and insert events
         events = []
-        if event_description:
-            events.append(create_event('Class', 'EnGeo 2209', event_description, start_time, end_time, timezone))
         if homework:
-            events.append(create_event(f'HW {homework} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
+            events.append(create_event(f'HW {homework} due', 'EnGeo 2209', 'Homework Due', start_time, end_time, timezone))
         if lab:
-            events.append(create_event(f'Lab {lab} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
+            events.append(create_event(f'Lab {lab} due', 'EnGeo 2209', 'Lab Due', start_time, end_time, timezone))
         if discussion:
             events.append(create_event(f'Discussion {discussion} due', 'EnGeo 2209', event_description, start_time, end_time, timezone))
         if quiz:
-            events.append(create_event(f'Quiz {quiz} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
+            events.append(create_event(f'Quiz {quiz} due', 'EnGeo 2209', 'Quiz day', start_time, end_time, timezone))
         if exam:
-            events.append(create_event(f'Exam {exam} due', 'EnGeo 2209', 'Office Hours at Wednesdays 11:00 AM-1:00 PM', start_time, end_time, timezone))
+            events.append(create_event(f'Exam {exam} due', 'EnGeo 2209', 'exam day', start_time, end_time, timezone))
+        if event_description and week_number not in office_hours_added:
+            create_and_insert_event(service2, 'Class', 'EnGeo 2209', event_description, start_time, end_time, timezone)
+            wednesday_date = get_next_wednesday(date)
+            wednesday_start_time = datetime(wednesday_date.year, wednesday_date.month, wednesday_date.day, 11, 0, 0)
+            wednesday_end_time = wednesday_start_time + timedelta(hours=2)
+            create_and_insert_event(service2, 'Office Hours', 'EnGeo 2209', 'Office Hours on Wednesday', wednesday_start_time, wednesday_end_time, timezone)
+            office_hours_added.add(week_number)  # Mark this week as having office hours added
+
+
         for event in events:
             service2.events().insert(calendarId='dummytest12313@gmail.com', body=event).execute()
             time.sleep(1)  # Throttle requests to avoid quota limits
@@ -108,18 +125,31 @@ def main():
         for row in rows:
             homework, lab = row[2], row[3]
             if homework.strip():  # Check if homework is not empty
-                create_and_convert_file(service, homework, week_num, "homework", "solution", currentWeek)
-                #create_and_upload_file(service, lab, week_num, "homework_solution_week", currentWeek)
+                create_and_convert_file(service, homework,  "homework", "solution", currentWeek)
             if lab.strip():  # Check if lab is not empty
-                create_and_convert_file(service, lab, week_num, "lab", "report", currentWeek)
-                #create_and_upload_file(service, lab, week_num, "lab_template_week", currentWeek)
+                create_and_convert_file(service, lab,  "lab", "report", currentWeek)
     weekData.clear()
     if weekData:
         process_and_upload_week_data(service, currentWeek, weekData)
   except HttpError as error:
     print(f"An error occurred: {error}")
 
-#start_of_week1 = datetime(2024, 1, 23)
+def create_and_insert_event(service, summary, location, description, start_time, end_time, timezone):
+    event = {
+        'summary': summary,
+        'location': location,
+        'description': description,
+        'start': {
+            'dateTime': start_time.isoformat(),
+            'timeZone': timezone,
+        },
+        'end': {
+            'dateTime': end_time.isoformat(),
+            'timeZone': timezone,
+        },
+    }
+    service.events().insert(calendarId='primary', body=event).execute()
+    time.sleep(1)  # Throttle requests to avoid quota limits
 
 def get_relative_week_number(start_date, current_date_str):
     current_date = datetime.strptime(current_date_str, '%Y-%m-%d')
@@ -139,12 +169,11 @@ def create_and_upload_file(service, content, weekCount, file_prefix, currentWeek
     except Exception as e:
         print(f"Error creating file: {e}")
 
-def create_and_convert_file(service, content, weekCount, file_prefix, file_post, currentWeek):
+def create_and_convert_file(service, assignNum, file_prefix, file_post, currentWeek):
     """Create and upload a file for homework or lab."""
-    #f = open('user.txt', 'r')
     with open('user.txt', 'r') as file:
         f = file.read().rstrip()
-    name = f + "_" + file_prefix + "_" + str(weekCount) + "_" + file_post
+    name = f + "_" + file_prefix + "_" + assignNum + "_" + file_post
     file_name = f"{name}.txt"
     # File metadata
     file_metadata = {
