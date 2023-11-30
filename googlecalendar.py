@@ -87,8 +87,6 @@ def main():
             time.sleep(1)  # Throttle requests to avoid quota limits
 
     #Weekly Folder
-    #weekCount = 1  # Keeps track of weeks
-    #currentWeek = 'Week 1'
     start_of_week1_str = data[1][0]  # data[1] is the first row, and data[1][0] is the date in that row
     start_of_week1 = datetime.strptime(start_of_week1_str, '%Y-%m-%d')
     weekData = {}  # Stores data for the current week
@@ -110,9 +108,11 @@ def main():
         for row in rows:
             homework, lab = row[2], row[3]
             if homework.strip():  # Check if homework is not empty
-                create_and_upload_file(service, homework, week_num, "homework_solution_week", currentWeek)
+                create_and_convert_file(service, homework, week_num, "homework", "solution", currentWeek)
+                #create_and_upload_file(service, lab, week_num, "homework_solution_week", currentWeek)
             if lab.strip():  # Check if lab is not empty
-                create_and_upload_file(service, lab, week_num, "lab_template_week", currentWeek)
+                create_and_convert_file(service, lab, week_num, "lab", "report", currentWeek)
+                #create_and_upload_file(service, lab, week_num, "lab_template_week", currentWeek)
     weekData.clear()
     if weekData:
         process_and_upload_week_data(service, currentWeek, weekData)
@@ -136,6 +136,28 @@ def create_and_upload_file(service, content, weekCount, file_prefix, currentWeek
 
         print(f"File created: {file_name}")
         upload_file_to_drive(service, get_folder_id(currentWeek, service), file_name)
+    except Exception as e:
+        print(f"Error creating file: {e}")
+
+def create_and_convert_file(service, content, weekCount, file_prefix, file_post, currentWeek):
+    """Create and upload a file for homework or lab."""
+    #f = open('user.txt', 'r')
+    with open('user.txt', 'r') as file:
+        f = file.read().rstrip()
+    name = f + "_" + file_prefix + "_" + str(weekCount) + "_" + file_post
+    file_name = f"{name}.txt"
+    # File metadata
+    file_metadata = {
+        'name': name,
+        'mimeType': 'application/vnd.google-apps.document',
+        'parents': [get_folder_id(currentWeek, service)]
+    }
+    try:
+        with open(file_name, 'w') as file:
+            file.write("")  # Optionally write content to the file
+        media = MediaFileUpload(file_name, mimetype='text/plain', resumable=True)  # Correct MIME type for upload
+        file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()  # Add convert=True
+        print(f"File created: {file_name}")
     except Exception as e:
         print(f"Error creating file: {e}")
 
@@ -206,12 +228,6 @@ def create_event(summary, location, description, start_time, end_time, timezone)
             ],
         },
     }
-
-#def create_and_upload_file(service, folder_id, title, content, mimeType):
- #   file_metadata = {'name': title, 'parents': [folder_id], 'mimeType': mimeType}
-    # Add logic to handle file content if necessary
-  #  file = service.files().create(body=file_metadata, fields='id').execute()
-   # print(f"Created file {title} with ID: {file.get('id')}")
 
 
 #Get file ID

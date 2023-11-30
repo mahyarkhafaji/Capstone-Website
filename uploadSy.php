@@ -27,7 +27,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <?php
-$target_dir = "D:/wamp64/www/Web/";  // Directory to save the uploaded files
+$target_dir = "D:/XAMPP/htdocs/Web/";  // Directory to save the uploaded files
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 require_once 'config.php';
 

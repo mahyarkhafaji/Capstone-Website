@@ -14,6 +14,11 @@ if($client->isAccessTokenExpired()){
 }
 $google_oauth = new Google_Service_Oauth2($client);
 $user_info = $google_oauth->userinfo->get();
+
+$myfile = fopen("user.txt", "w") or die("Unable to open file!");
+$name = $user_info['givenName'] . "_" .  $user_info['familyName'];
+fwrite($myfile, $name);
+fclose($myfile);
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +47,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="calendar.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calender</a>
     <a href="textbook.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Find Textbook</a>
     <a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-display-topright">Logout</a>
-    <!--<a href="homepage.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-display-topright">Logout</a>-->
 </div>
 
 <!-- Header -->
