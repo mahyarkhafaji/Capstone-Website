@@ -1,11 +1,6 @@
 <?php
 
-// $server_name="insert";
-// $username="root";
-// $password="";
-// $database_name="questionnaire";
-
-define("server_name", "localhost"); //insert:3307
+define("server_name", "localhost");
 define("username", "root");
 define("password","");
 define("database_name","questionnaire");
@@ -164,33 +159,7 @@ if(isset($_POST["save"])){
 
     echo shell_exec("python generateSyllabus.py");
 
-    $filePath = 'syllabus-generated.docx';
-    $fileName = basename($filePath);
-
-// Check if the file exists
-    if (file_exists($filePath)) {
-    // Set headers to download the file
-      header('Content-Description: File Transfer');
-      header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-      header('Content-Disposition: attachment; filename="' . $fileName . '"');
-      header('Expires: 0');
-      header('Cache-Control: must-revalidate');
-      header('Pragma: public');
-      header('Content-Length: ' . filesize($filePath));
-
-    // Clear the output buffer
-      ob_clean();
-      flush();
-
-    // Read the file and output its contents
-      readfile($filePath);
-      exit;
-    } else {
-      echo "Error: File not found.";
-  }
-
     mysqli_close($conn);
-
 }
 
 ?>

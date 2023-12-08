@@ -52,7 +52,7 @@ def main():
 
   try:
     service = build("calendar", "v3", credentials=creds)
-
+    noEvents = False
     # Call the Calendar API
     now = datetime.datetime.utcnow().isoformat() + "Z"  # 'Z' indicates UTC time
     print("Getting the upcoming 10 events")
@@ -71,7 +71,7 @@ def main():
 
     if not events:
       print("No upcoming events found.")
-      return
+      noEvents = True
 
     # Prints the start and name of the next 10 events
     for event in events:
@@ -119,6 +119,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-twothird">
     <h2>Upcoming assignments for this month!</h2>"""
   
+  
+
   strEvent = ""
   for event in events:
     start = event["start"].get("dateTime", event["start"].get("date"))
@@ -132,6 +134,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   with open("calendar.html", "w") as file:
         # Write the string into the file
         file.write(nav)
+        if (noEvents):
+          strEvent = "No upcoming events found."
         file.write(strEvent)
         file.write(end)
 

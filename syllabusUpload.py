@@ -63,9 +63,6 @@ def main():
         fields='id'
     ).execute()
 
-    # Create a MediaFileUpload object for the downloaded file
-    #media = MediaFileUpload('C:/Users/mahya/Downloads/schedule.xlsx')
-
     # Load the Excel file
     df = pd.read_excel('C:/Users/mahya/Downloads/schedule.xlsx')
 
@@ -84,27 +81,6 @@ def main():
 
 # Upload file
     file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
-
-# Set the file metadata
-    #file_metadata = {
-    #    'name': 'schedule.xlsx',
-    #    'parents': [folder_id]
-    #}
-    #file = service.files().create(
-    #    body=file_metadata,
-    #    media_body=media,
-    #    fields='id'
-    #).execute()
-    
-    #file_metadata = {
-    #    'name': 'schedule.xlsx',
-    #    'parents': [get_folder_id("IT212", service)]
-    #}
-    #file = service.files().create(
-    #    body=file_metadata,
-    #    media_body=media,
-    #    fields='id'
-    #).execute()
 
   except HttpError as error:
     print(f"An error occurred: {error}")

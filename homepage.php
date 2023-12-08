@@ -1,12 +1,6 @@
 <?php
 require_once 'config.php';
 
-//if (isset($_SESSION['user_token'])) {
-//  header("Location: students.php");
-//} else {
-//echo "<a class = w3-button w3-black w3-padding-large w3-large w3-margin-top href='".$client->createAuthUrl()."'>Google Login</a>";
-//}
-
 $login_url = $client->createAuthUrl();
 
 if (isset($_GET['code'])):
@@ -70,20 +64,20 @@ endif;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-a {
-  position: absolute;
-  left: 600px;
-  top: 650px;
-}
-</style>
+        /* Style for the buttons container */
+        .buttons-container {
+            display: flex;           /* Enable Flexbox */
+            justify-content: center; /* Center buttons horizontally */
+            gap: 10px;               /* Add some space between buttons */
+        }
+
+        /* Style for individual buttons */
+        .w3-button {
+            margin-top: 0;           /* Remove margin-top from individual buttons */
+        }
+    </style>
 </head>
 <body>
-
-<!--http://localhost/Web/homepage.php-->
-<!--ngrok http 80-->
 
 <!-- Header -->
 <header class="w3-container w3-center" style="background-color:rgb(69, 0, 132);color:white;padding:10px 16px">
@@ -97,11 +91,12 @@ a {
     <div class="w3-twothird">
       <h1>Are you a student or a professor?</h1>
       <h3>For students, you will need to have an google account and sign in through Google.</h3>
-      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="window.location.href='professor.html'">Professor</button>
-        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top  data-onsuccess="onSignIn">Students</button>-->
-      <p></p>
-        <!--<div class="g-signin2" data-onsuccess="onSignIn">Students</div>-->
-        <a href="<?= $login_url ?>"><img src="https://tinyurl.com/46bvrw4s" alt="Google Logo"> Login with Google</a>
+      <div class="buttons-container">
+        <button class="w3-button w3-black w3-padding-large w3-large" onclick="window.location.href='professor.html'">Professor</button>
+        <a href="<?= $login_url ?>">
+          <button class="w3-button w3-black w3-padding-large w3-large">Students</button>
+        </a>
+      </div>
     </div>
   </div>
 </div>

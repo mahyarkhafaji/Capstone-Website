@@ -109,7 +109,6 @@ def main():
     weekData = {}  # Stores data for the current week
 
     for row in data[1:]:  # Skip the header row
-        #date, homework, lab = row[0], row[2], row[3]
         date = row[0]
         week_num = get_relative_week_number(start_of_week1, date)
         if week_num not in weekData:
